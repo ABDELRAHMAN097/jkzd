@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #e5ff00;
+  --color-secondary: #d27139;
+}
+
+
+@theme {
+  --color-primary: oklch(var(--color-primary));
+  --color-secondary: oklch(var(--color-secondary));
+}
+html[dir="rtl"]{
+  font-family: "Rubik", sans-serif !important;
+}
+html[dir="ltr"]{
+  font-family: "Roboto Serif","sans-serif" !important;
+}
+::-webkit-scrollbar {
+  @apply w-[8px] h-3;
+}
+
+::-webkit-scrollbar-track {
+  @apply rounded-full bg-primary/20;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-full;
+}
+
+* {
+  font-family: var(--font-family-display) !important;
+}
+
+.animation {
+  transition: all 0.4s ease-in-out;
+}
+
+
+
+/* *,
+*::before,
+*::after {
+  cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/heart.svg") 5 5, auto;
+} */
+
+
+.react-datepicker__close-icon {
+  @apply bg-primary rounded-full !hidden;
+}
+
+.react-datepicker-wrapper {
+  @apply w-full;
+}
