@@ -33,13 +33,13 @@ const Navbar = () => {
   };
 
   return (
-    <div className={`w-full top-0 left-0 z-50 p-4 flex justify-between items-center bg-transparent ${
+    <div className={`w-full top-0 left-0 z-50 p-4 flex justify-end items-center bg-transparent ${
         isOpen ? "fixed bg-[#2c2c2c]" : "static"
     }`} >
       {/* Logo */}
-      <Link to="/" className=" font-bold text-xl z-50">
+      {/* <Link to="/" className=" font-bold text-xl z-50">
         <img className="w-15 sm:w-20" src="/image/logo.png" alt="bg-nav" />
-      </Link>
+      </Link> */}
 
       {/* Toggle Button */}
       <button onClick={() => setIsOpen(!isOpen)} className=" text-3xl text-white z-50">
