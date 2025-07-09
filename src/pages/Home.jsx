@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import ModelViewer from "../components/ModelViewer";
+import BlurText from "../components/ReactBits/BlurText";
 
 const Home = () => {
   const videoRef = useRef(null);
@@ -84,6 +85,10 @@ const Home = () => {
       desc: "Interactive, real-time interfaces with smooth animations.",
     },
   ];
+
+  const handleAnimationComplete = () => {
+   
+  };
   return (
     <>
       <div
@@ -104,13 +109,20 @@ const Home = () => {
         <div className="grid grid-cols-1 gap-8 h-screen w-full relative z-10 bg-black/48">
           <div className="flex flex-col justify-end items-center text-center px-4">
             <h1 className="text-4xl md:text-6xl font-bold mb-4">
-              Abdelrahman Magdy
+              <BlurText
+            text="Abdelrahman Magdy"
+            delay={150}
+            animateBy="words"
+            direction="top"
+            onAnimationComplete={handleAnimationComplete}
+            className="text-4xl md:text-6xl font-bold mb-4"
+          />
             </h1>
             <p className="text-lg md:text-xl mb-6 max-w-2xl">
               I'm a frontend developer turning designs into living, breathing
-              interfaces.
+              interfaces
               <br />
-              Smooth. Fast. Responsive. Just like your users expect.
+              Smooth Fast Responsive Just like your users expect
             </p>
             {/* eye */}
             <div className="flex justify-center items-center gap-2">
@@ -171,11 +183,11 @@ const Home = () => {
         {/* modall */}
         <div className="relative z-30 grid-colspan-1 text-white text-center  min-h-36">
           {/* <div className="absolute left-0 top-2 -z-10 size-62 bg-green-500 blur-lg  rounded-full"></div> */}
+
+         
         </div>
         <div className="grid-colspan-1 flex justify-center items-center text-white text-center min-h-36">
-          <div className="w-full h-full  flex justify-center items-end">
-            
-          </div>
+          <div className="w-full h-full  flex justify-center items-end"></div>
         </div>
       </div>
     </>
