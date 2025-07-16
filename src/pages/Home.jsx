@@ -190,11 +190,11 @@ const Home = () => {
                   </div>
 
                   {/* Back Side */}
-                  <div className="absolute w-full h-full flex justify-center items-center [transform:rotateY(180deg)] backface-hidden bg-black rounded-lg overflow-hidden">
+                  <div className="absolute w-full h-full flex justify-center items-center [transform:rotateY(180deg)] backface-hidden bg-black/70 rounded-lg overflow-hidden">
                     <img
                       src="/image/hd.png"
                       alt="Back"
-                      className="w-1/2 object-cover"
+                      className="w-1/4 object-cover"
                     />
                   </div>
                 </div>
