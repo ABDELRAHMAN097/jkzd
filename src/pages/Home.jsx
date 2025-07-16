@@ -139,7 +139,7 @@ const Home = () => {
                 italic={true}
                 textColor="#ffffff"
                 strokeColor="#ff0000"
-                minFontSize={36}
+                minFontSize={16}
               />
             </h1>
             {/* I'm a frontend developer turning designs into living, breathing
