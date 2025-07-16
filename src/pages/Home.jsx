@@ -128,7 +128,7 @@ const Home = () => {
               />
             </div>
             {/* Abdelrahman Magdy */}
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+            <h1 className="text-md md:text-xl font-bold mb-4">
             <TextPressure
                 text="Abdelrahman Magdy"
                 flex={true}
