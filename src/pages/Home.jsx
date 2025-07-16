@@ -2,6 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import BlurText from "../components/ReactBits/BlurText";
 import TextPressure from "../components/ReactBits/TextPressure";
 import { Typewriter } from "react-simple-typewriter";
+import Beams from "../components/ReactBits/Beams";
+import DecryptedText from "../components/ReactBits/DecryptedText";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const videoRef = useRef(null);
@@ -93,7 +96,6 @@ const Home = () => {
     },
   ];
 
-  const handleAnimationComplete = () => {};
   return (
     <>
       <div
@@ -112,8 +114,32 @@ const Home = () => {
 
         {/* Content Layer */}
         <div className="grid grid-cols-1 gap-8 h-screen w-full relative z-10 bg-black/48">
+          {/* eye */}
           <div className="flex flex-col justify-end items-center text-center px-4">
             {/* dcvcecfewdwd */}
+            <div className="flex justify-center items-center gap-2 mb-2">
+              {/* Left Eye */}
+              <div
+                ref={leftEyeRef}
+                className="w-10 h-10 bg-white rounded-full flex justify-center items-center relative"
+              >
+                <div
+                  ref={leftPupilRef}
+                  className="w-4 h-4 bg-black rounded-full absolute transition-all duration-100"
+                ></div>
+              </div>
+
+              {/* Right Eye */}
+              <div
+                ref={rightEyeRef}
+                className="w-10 h-10 bg-white rounded-full flex justify-center items-center relative"
+              >
+                <div
+                  ref={rightPupilRef}
+                  className="w-4 h-4 bg-black rounded-full absolute transition-all duration-100"
+                ></div>
+              </div>
+            </div>
             <div style={{ position: "relative" }}>
               <TextPressure
                 text="Hello! I Am"
@@ -134,7 +160,8 @@ const Home = () => {
                 words={[
                   "Abdelrahman Magdy",
                   "Frontend Developer",
-                  "UI/UX Lover",
+                  "React.js",
+                  "Next.js",
                 ]}
                 loop={true}
                 cursor
@@ -151,30 +178,12 @@ const Home = () => {
               <br />
               Smooth Fast Responsive Just like your users expect
             </p>
-            {/* eye */}
-            <div className="flex justify-center items-center gap-2">
-              {/* Left Eye */}
-              <div
-                ref={leftEyeRef}
-                className="w-20 h-20 bg-white rounded-full flex justify-center items-center relative"
-              >
-                <div
-                  ref={leftPupilRef}
-                  className="w-6 h-6 bg-black rounded-full absolute transition-all duration-100"
-                ></div>
-              </div>
-
-              {/* Right Eye */}
-              <div
-                ref={rightEyeRef}
-                className="w-20 h-20 bg-white rounded-full flex justify-center items-center relative"
-              >
-                <div
-                  ref={rightPupilRef}
-                  className="w-6 h-6 bg-black rounded-full absolute transition-all duration-100"
-                ></div>
-              </div>
-            </div>
+            {/* button cv */}
+            <Link to="https://drive.google.com/file/d/1M4NFtt8ou7qvoeo64fUTv-UeMMqwdjuX/view?usp=drive_link">
+            <button className="bg-white text-black px-6 py-2 rounded-full">
+              Download CV
+            </button>
+            </Link>
           </div>
           {/* 4taps */}
           <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-1 px-4">
@@ -211,13 +220,45 @@ const Home = () => {
       </div>
 
       {/* Section Below */}
-      <div className="h-screen grid grid-cols-1 md:grid-cols-2 gap-4">
-        {/* modall */}
-        <div className="relative z-30 grid-colspan-1 text-white text-center  min-h-36">
-          {/* <div className="absolute left-0 top-2 -z-10 size-62 bg-green-500 blur-lg  rounded-full"></div> */}
+      <div className="h-screen grid grid-cols-1 relative gap-4">
+        <div
+          style={{ width: "100%", height: "600px", position: "absolute" }}
+          className="z-0 overflow-hidden"
+        >
+          <Beams
+            beamWidth={2}
+            beamHeight={15}
+            beamNumber={12}
+            lightColor="#ffffff"
+            speed={10}
+            noiseIntensity={0.45}
+            scale={0.2}
+            rotation={17}
+          />
         </div>
-        <div className="grid-colspan-1 flex justify-center items-center text-white text-center min-h-36">
-          <div className="w-full h-full  flex justify-center items-end"></div>
+        <div className="z-10">
+          <h3 className="text-4xl md:text-6xl font-bold mb-4 text-white">
+            cbvveve
+          </h3>
+        </div>
+
+        <div
+          className="z-10 text-white relative"
+          style={{
+            marginTop: "1rem",
+            minHeight: "50px",
+            zIndex: 50,
+          }}
+        >
+          <DecryptedText
+            text="Customize me"
+            speed={100}
+            maxIterations={20}
+            characters="ABCD1234!?"
+            animateOn="view"
+            parentClassName="all-letters"
+            encryptedClassName="encrypted"
+          />
         </div>
       </div>
     </>
