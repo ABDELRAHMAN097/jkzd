@@ -127,18 +127,25 @@ const Home = () => {
                 minFontSize={36}
               />
             </div>
-            {/*  */}
+            {/* Abdelrahman Magdy */}
             <h1 className="text-4xl md:text-6xl font-bold mb-4">
-              <BlurText
+            <TextPressure
                 text="Abdelrahman Magdy"
-                delay={150}
-                animateBy="words"
-                direction="top"
-                onAnimationComplete={handleAnimationComplete}
-                className="text-4xl md:text-6xl font-bold mb-4"
+                flex={true}
+                alpha={false}
+                stroke={false}
+                width={true}
+                weight={true}
+                italic={true}
+                textColor="#ffffff"
+                strokeColor="#ff0000"
+                minFontSize={36}
               />
             </h1>
-
+            {/* I'm a frontend developer turning designs into living, breathing
+              interfaces
+              <br />
+              Smooth Fast Responsive Just like your users expect */}
             <p className="text-lg md:text-xl mb-6 max-w-2xl">
               I'm a frontend developer turning designs into living, breathing
               interfaces
