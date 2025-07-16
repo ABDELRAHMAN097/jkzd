@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import BlurText from "../components/ReactBits/BlurText";
 import TextPressure from "../components/ReactBits/TextPressure";
-import { Typewriter } from "react-simple-typewriter";
 import Beams from "../components/ReactBits/Beams";
 import DecryptedText from "../components/ReactBits/DecryptedText";
 import { Link } from "react-router-dom";
@@ -156,20 +155,7 @@ const Home = () => {
             </div>
             {/* Abdelrahman Magdy */}
             <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">
-              <Typewriter
-                words={[
-                  "Abdelrahman Magdy",
-                  "Frontend Developer",
-                  "React.js",
-                  "Next.js",
-                ]}
-                loop={true}
-                cursor
-                cursorStyle="|"
-                typeSpeed={100}
-                deleteSpeed={60}
-                delaySpeed={2000}
-              />
+            Abdelrahman Magdy
             </h1>
 
             <p className="text-lg md:text-xl mb-6 max-w-2xl">
