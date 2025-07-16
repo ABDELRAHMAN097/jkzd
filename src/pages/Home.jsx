@@ -1,6 +1,6 @@
-import { useEffect, useRef } from "react";
-import ModelViewer from "../components/ModelViewer";
+import { useEffect, useRef, useState } from "react";
 import BlurText from "../components/ReactBits/BlurText";
+import TextPressure from "../components/ReactBits/TextPressure";
 
 const Home = () => {
   const videoRef = useRef(null);
@@ -67,6 +67,12 @@ const Home = () => {
   }, []);
 
   // 4taps
+  const [flippedIndex, setFlippedIndex] = useState(null);
+
+  const toggleFlip = (index) => {
+    setFlippedIndex((prev) => (prev === index ? null : index));
+  };
+
   const features = [
     {
       title: "UI Design",
@@ -86,9 +92,7 @@ const Home = () => {
     },
   ];
 
-  const handleAnimationComplete = () => {
-   
-  };
+  const handleAnimationComplete = () => {};
   return (
     <>
       <div
@@ -108,16 +112,33 @@ const Home = () => {
         {/* Content Layer */}
         <div className="grid grid-cols-1 gap-8 h-screen w-full relative z-10 bg-black/48">
           <div className="flex flex-col justify-end items-center text-center px-4">
+            {/* dcvcecfewdwd */}
+            <div style={{ position: "relative" }}>
+              <TextPressure
+                text="Hello! I Am"
+                flex={true}
+                alpha={false}
+                stroke={false}
+                width={true}
+                weight={true}
+                italic={true}
+                textColor="#ffffff"
+                strokeColor="#ff0000"
+                minFontSize={36}
+              />
+            </div>
+            {/*  */}
             <h1 className="text-4xl md:text-6xl font-bold mb-4">
               <BlurText
-            text="Abdelrahman Magdy"
-            delay={150}
-            animateBy="words"
-            direction="top"
-            onAnimationComplete={handleAnimationComplete}
-            className="text-4xl md:text-6xl font-bold mb-4"
-          />
+                text="Abdelrahman Magdy"
+                delay={150}
+                animateBy="words"
+                direction="top"
+                onAnimationComplete={handleAnimationComplete}
+                className="text-4xl md:text-6xl font-bold mb-4"
+              />
             </h1>
+
             <p className="text-lg md:text-xl mb-6 max-w-2xl">
               I'm a frontend developer turning designs into living, breathing
               interfaces
@@ -156,19 +177,24 @@ const Home = () => {
                 key={index}
                 className="flex justify-center items-center col-span-1 text-white"
               >
-                <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)]">
+                <div
+                  className={`relative w-full h-40 transition-transform duration-700 [transform-style:preserve-3d] rounded-xl cursor-pointer ${
+                    flippedIndex === index ? "[transform:rotateY(180deg)]" : ""
+                  }`}
+                  onClick={() => toggleFlip(index)}
+                >
                   {/* Front Side */}
-                  <div className="absolute w-full h-full backface-hidden flex flex-col justify-center items-center text-white bg-black/60 rounded-lg p-4">
+                  <div className="absolute w-full h-full backface-hidden flex flex-col justify-center items-center bg-black/60 rounded-lg p-4">
                     <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
                     <p className="text-sm text-center">{feature.desc}</p>
                   </div>
 
                   {/* Back Side */}
-                  <div className="flex justify-center absolute w-full h-full backface-hidden [transform:rotateY(180deg)] rounded-lg overflow-hidden">
+                  <div className="absolute w-full h-full flex justify-center items-center [transform:rotateY(180deg)] backface-hidden bg-black rounded-lg overflow-hidden">
                     <img
                       src="/image/hd.png"
                       alt="Back"
-                      className="w-1/4 object-cover"
+                      className="w-1/2 object-cover"
                     />
                   </div>
                 </div>
@@ -183,8 +209,6 @@ const Home = () => {
         {/* modall */}
         <div className="relative z-30 grid-colspan-1 text-white text-center  min-h-36">
           {/* <div className="absolute left-0 top-2 -z-10 size-62 bg-green-500 blur-lg  rounded-full"></div> */}
-
-         
         </div>
         <div className="grid-colspan-1 flex justify-center items-center text-white text-center min-h-36">
           <div className="w-full h-full  flex justify-center items-end"></div>

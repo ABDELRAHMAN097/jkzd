@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik&family=Roboto+Serif&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 :root {
   --color-primary: #0000;
   --color-secondary: #d27139;
-  --font-family-display: "Bitcount Grid Double", system-ui;
+  --font-family-display: "Roboto", sans-serif;
 }
 
 * {
