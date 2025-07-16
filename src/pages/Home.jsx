@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import BlurText from "../components/ReactBits/BlurText";
 import TextPressure from "../components/ReactBits/TextPressure";
+import { Typewriter } from "react-simple-typewriter";
 
 const Home = () => {
   const videoRef = useRef(null);
@@ -92,7 +93,7 @@ const Home = () => {
     },
   ];
 
-  
+  const handleAnimationComplete = () => {};
   return (
     <>
       <div
@@ -128,24 +129,22 @@ const Home = () => {
               />
             </div>
             {/* Abdelrahman Magdy */}
-            <h1 className="text-[5px] md:text-xl font-bold mb-4">
-            <TextPressure
-                text="Abdelrahman Magdy"
-                flex={true}
-                alpha={false}
-                stroke={false}
-                width={true}
-                weight={true}
-                italic={true}
-                textColor="#ffffff"
-                strokeColor="#ff0000"
-                minFontSize={16}
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">
+              <Typewriter
+                words={[
+                  "Abdelrahman Magdy",
+                  "Frontend Developer",
+                  "UI/UX Lover",
+                ]}
+                loop={true}
+                cursor
+                cursorStyle="|"
+                typeSpeed={100}
+                deleteSpeed={60}
+                delaySpeed={2000}
               />
             </h1>
-            {/* I'm a frontend developer turning designs into living, breathing
-              interfaces
-              <br />
-              Smooth Fast Responsive Just like your users expect */}
+
             <p className="text-lg md:text-xl mb-6 max-w-2xl">
               I'm a frontend developer turning designs into living, breathing
               interfaces
