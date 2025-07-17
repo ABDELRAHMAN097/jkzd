@@ -3,6 +3,7 @@ import BlurText from "../components/ReactBits/BlurText";
 import TextPressure from "../components/ReactBits/TextPressure";
 import Beams from "../components/ReactBits/Beams";
 import DecryptedText from "../components/ReactBits/DecryptedText";
+import ScrollVelocity from "../components/ReactBits/ScrollVelocity ";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -94,7 +95,7 @@ const Home = () => {
       desc: "Interactive, real-time interfaces with smooth animations.",
     },
   ];
-
+  
   return (
     <>
       <div
@@ -139,7 +140,7 @@ const Home = () => {
                 ></div>
               </div>
             </div>
-            <div style={{ position: "relative"}}>
+            <div style={{ position: "relative" }}>
               <TextPressure
                 text="Hello! I Am"
                 flex={true}
@@ -158,9 +159,10 @@ const Home = () => {
               Abdelrahman Magdy
             </h1>
 
-            <p 
-            style={{ fontFamily: "var(--font-family-text)" }}
-            className="text-lg md:text-xl mb-6 max-w-2xl">
+            <p
+              style={{ fontFamily: "var(--font-family-text)" }}
+              className="text-lg md:text-xl mb-6 max-w-2xl"
+            >
               I'm a frontend developer turning designs into living, breathing
               interfaces
               <br />
@@ -168,17 +170,12 @@ const Home = () => {
             </p>
             {/* button cv */}
             <Link to="https://drive.google.com/file/d/1M4NFtt8ou7qvoeo64fUTv-UeMMqwdjuX/view?usp=drive_link">
-              <button
-             
-              className="bg-secondary text-black px-6 py-2 rounded-full">
+              <button className="bg-secondary text-black px-6 py-2 rounded-full">
                 Download CV
               </button>
             </Link>
           </div>
           {/* 4taps */}
-
-          
-          
         </div>
       </div>
 
@@ -201,9 +198,11 @@ const Home = () => {
         {/* First Paragraph */}
         <div className="relative z-10 flex justify-start items-start w-full border-b border-secondary">
           <div className="w-full flex justify-center md:justify-start items-center text-center md:text-start text-white p-4 rounded">
-            <img 
-            className="w-16 md:w-24 animate-sway"
-            src="/image/ss.png" alt="logo" />
+            <img
+              className="w-16 md:w-24 animate-sway"
+              src="/image/ss.png"
+              alt="logo"
+            />
             <DecryptedText
               className="text-5xl md:text-6xl font-anton text-secondary justify-start leading-relaxed"
               text="About Me"
@@ -233,6 +232,20 @@ const Home = () => {
             />
           </div>
         </div>
+      </div>
+
+      {/* skils section */}
+      <div className="-skew-x-44">
+        <ScrollVelocity
+          texts={["Boody Magdy", "My Skils"]}
+          velocity={150}
+          className="custom-scroll-text text-secondary skew-x-16"
+        />
+        {/* start */}
+        <div className="grid grid-cols-1 md:grid-cols-2">
+
+        </div>
+        {/* end */}
       </div>
     </>
   );
