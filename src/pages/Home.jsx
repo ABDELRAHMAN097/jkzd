@@ -103,7 +103,7 @@ const Home = () => {
       >
         {/* Background Video */}
         <video
-          src="/image/herovedio.mp4"
+          src="/image/aa.mp4"
           ref={videoRef}
           loop
           muted
@@ -112,11 +112,11 @@ const Home = () => {
         />
 
         {/* Content Layer */}
-        <div className="grid grid-cols-1 gap-8 h-screen w-full relative z-10 bg-black/48">
+        <div className="grid grid-cols-1 gap-0 h-screen w-full relative z-10 bg-black/16">
           {/* eye */}
-          <div className="flex flex-col justify-end items-center text-center px-4">
+          <div className="flex flex-col space-y-10 justify-center items-center text-center px-4">
             {/* dcvcecfewdwd */}
-            <div className="flex justify-center items-center gap-2 mb-2">
+            <div className="flex justify-center items-center gap-2 mb-4">
               {/* Left Eye */}
               <div
                 ref={leftEyeRef}
@@ -139,7 +139,7 @@ const Home = () => {
                 ></div>
               </div>
             </div>
-            <div style={{ position: "relative" }}>
+            <div style={{ position: "relative"}}>
               <TextPressure
                 text="Hello! I Am"
                 flex={true}
@@ -154,11 +154,13 @@ const Home = () => {
               />
             </div>
             {/* Abdelrahman Magdy */}
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">
+            <h1 className="text-3xl md:text-5xl text-secondary font-bold mb-4">
               Abdelrahman Magdy
             </h1>
 
-            <p className="text-lg md:text-xl mb-6 max-w-2xl">
+            <p 
+            style={{ fontFamily: "var(--font-family-text)" }}
+            className="text-lg md:text-xl mb-6 max-w-2xl">
               I'm a frontend developer turning designs into living, breathing
               interfaces
               <br />
@@ -166,42 +168,17 @@ const Home = () => {
             </p>
             {/* button cv */}
             <Link to="https://drive.google.com/file/d/1M4NFtt8ou7qvoeo64fUTv-UeMMqwdjuX/view?usp=drive_link">
-              <button className="bg-white text-black px-6 py-2 rounded-full">
+              <button
+             
+              className="bg-secondary text-black px-6 py-2 rounded-full">
                 Download CV
               </button>
             </Link>
           </div>
           {/* 4taps */}
-          <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-1 px-4">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="flex justify-center items-center col-span-1 text-white"
-              >
-                <div
-                  className={`relative w-full h-40 transition-transform duration-700 [transform-style:preserve-3d] rounded-xl cursor-pointer ${
-                    flippedIndex === index ? "[transform:rotateY(180deg)]" : ""
-                  }`}
-                  onClick={() => toggleFlip(index)}
-                >
-                  {/* Front Side */}
-                  <div className="absolute w-full h-full backface-hidden flex flex-col justify-center items-center bg-black/60 rounded-lg p-4">
-                    <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
-                    <p className="text-sm text-center">{feature.desc}</p>
-                  </div>
 
-                  {/* Back Side */}
-                  <div className="absolute w-full h-full flex justify-center items-center [transform:rotateY(180deg)] backface-hidden bg-black/70 rounded-lg overflow-hidden">
-                    <img
-                      src="/image/hd.png"
-                      alt="Back"
-                      className="w-1/4 object-cover"
-                    />
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          
+          
         </div>
       </div>
 
@@ -222,10 +199,29 @@ const Home = () => {
         </div>
 
         {/* First Paragraph */}
-        <div className="relative z-10 flex justify-center items-center w-full">
-          <div className="w-full text-center text-white p-4 rounded">
+        <div className="relative z-10 flex justify-start items-start w-full border-b border-secondary">
+          <div className="w-full flex justify-center md:justify-start items-center text-center md:text-start text-white p-4 rounded">
+            <img 
+            className="w-16 md:w-24 animate-sway"
+            src="/image/ss.png" alt="logo" />
             <DecryptedText
-              className="text-5xl md:text-4xl font-bold justify-center"
+              className="text-5xl md:text-6xl font-anton text-secondary justify-start leading-relaxed"
+              text="About Me"
+              speed={100}
+              maxIterations={20}
+              characters="ABCD1234!?"
+              animateOn="view"
+              parentClassName="all-letters"
+              encryptedClassName="encrypted"
+            />
+          </div>
+        </div>
+
+        {/* Second Paragraph */}
+        <div className="relative z-10 flex justify-center items-center w-full">
+          <div className="w-full text-center md:text-start text-white p-4 rounded">
+            <DecryptedText
+              className="text-2xl md:text-4xl justify-center leading-relaxed"
               text="I'm a passionate Frontend Developer with a strong eye for design and user experience.
   I specialize in building modern, fast, and responsive websites using React, Next.js, and Tailwind CSS."
               speed={100}

@@ -1,19 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 :root {
   --color-primary: #0000;
-  --color-secondary: #d27139;
+  --color-secondary: #00f050;   
   --font-family-display: "Roboto", sans-serif;
+  --font-family-Anton: "Anton", sans-serif;
 }
 
-* {
-  font-family: var(--font-family-display) !important;
+body {
+  font-family: var(--font-family-display);
 }
+
 
 @theme {
   --color-primary: oklch(var(--color-primary));
   --color-secondary: oklch(var(--color-secondary));
+  --font-family-display:  "Roboto", sans-serif;
+  --font-family-Anton: "Anton", sans-serif;
 }
 
 /* html[dir="rtl"]{
@@ -35,9 +39,7 @@ html[dir="ltr"]{
   @apply bg-primary rounded-full;
 }
 
-* {
-  font-family: var(--font-family-display) !important;
-}
+
 
 .animation {
   transition: all 0.4s ease-in-out;
@@ -62,4 +64,20 @@ html[dir="ltr"]{
 
 
 
+/*  */
+@keyframes sway {
+  0% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+
+.animate-sway {
+  animation: sway 2s infinite ease-in-out;
+}
 
