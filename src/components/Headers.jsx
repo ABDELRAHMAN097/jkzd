@@ -1,4 +1,5 @@
 import React from 'react'
+import DecryptedText from './ReactBits/DecryptedText'
 
 const Headers = ({text}) => {
   return (
@@ -11,7 +12,7 @@ const Headers = ({text}) => {
                     />
                     <DecryptedText
                       className="text-5xl md:text-6xl font-anton text-secondary justify-start leading-relaxed"
-                      text="About Me"
+                      text={text}
                       speed={100}
                       maxIterations={20}
                       characters="ABCD1234!?"

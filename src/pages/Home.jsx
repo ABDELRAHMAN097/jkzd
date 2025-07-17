@@ -5,6 +5,7 @@ import Beams from "../components/ReactBits/Beams";
 import DecryptedText from "../components/ReactBits/DecryptedText";
 import ScrollVelocity from "../components/ReactBits/ScrollVelocity ";
 import { Link } from "react-router-dom";
+import Headers from "../components/Headers";
 
 const Home = () => {
   const videoRef = useRef(null);
@@ -195,25 +196,9 @@ const Home = () => {
           />
         </div>
 
-        {/* First Paragraph */}
+        {/* header */}
         <div className="relative z-10 flex justify-start items-start w-full border-b border-secondary">
-          <div className="w-full flex justify-center md:justify-start items-center text-center md:text-start text-white p-4 rounded">
-            <img
-              className="w-16 md:w-24 animate-sway"
-              src="/image/ss.png"
-              alt="logo"
-            />
-            <DecryptedText
-              className="text-5xl md:text-6xl font-anton text-secondary justify-start leading-relaxed"
-              text="About Me"
-              speed={100}
-              maxIterations={20}
-              characters="ABCD1234!?"
-              animateOn="view"
-              parentClassName="all-letters"
-              encryptedClassName="encrypted"
-            />
-          </div>
+        <Headers text="About Me" />
         </div>
 
         {/* Second Paragraph */}
@@ -235,17 +220,29 @@ const Home = () => {
       </div>
 
       {/* skils section */}
+      <div>
       <div className="-skew-x-44">
         <ScrollVelocity
           texts={["Boody Magdy", "My Skils"]}
           velocity={150}
           className="custom-scroll-text text-secondary skew-x-16"
         />
-        {/* start */}
-        <div className="grid grid-cols-1 md:grid-cols-2">
+      </div>
 
+      <div className="h-screen grid grid-cols-1 md:grid-cols-2">
+
+         {/* header */}
+      <div className="flex justify-center md:justify-start items-center col-span-1 ">
+        <Headers text="My Skills" />
         </div>
-        {/* end */}
+
+        <div className="flex justify-center items-center col-span-1">
+        
+        </div>
+
+
+      </div>
+        
       </div>
     </>
   );
