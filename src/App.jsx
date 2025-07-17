@@ -16,7 +16,7 @@ function App() {
         />
       </Helmet>
 
-      <div className="min-h-screen relative bg-black z-0">
+      <div className="min-h-screen relative bg-black z-0 overflow-hidden">
       <div className="fixed top-0 left-0 w-full z-50">
         <Navbar />
       </div>  
