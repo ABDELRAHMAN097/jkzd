@@ -19,7 +19,6 @@ export default function DecryptedText({
   const [isHovering, setIsHovering] = useState(false)
   const [isScrambling, setIsScrambling] = useState(false)
   const [revealedIndices, setRevealedIndices] = useState(new Set())
-  const [hasAnimated, setHasAnimated] = useState(false)
   const containerRef = useRef(null)
 
   useEffect(() => {
@@ -73,7 +72,7 @@ export default function DecryptedText({
 
         for (let i = nonSpaceChars.length - 1; i > 0; i--) {
           const j = Math.floor(Math.random() * (i + 1))
-            ;[nonSpaceChars[i], nonSpaceChars[j]] = [nonSpaceChars[j], nonSpaceChars[i]]
+          ;[nonSpaceChars[i], nonSpaceChars[j]] = [nonSpaceChars[j], nonSpaceChars[i]]
         }
 
         let charIndex = 0
@@ -149,9 +148,10 @@ export default function DecryptedText({
 
     const observerCallback = (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting && !hasAnimated) {
+        if (entry.isIntersecting) {
           setIsHovering(true)
-          setHasAnimated(true)
+        } else {
+          setIsHovering(false)
         }
       })
     }
@@ -171,14 +171,14 @@ export default function DecryptedText({
     return () => {
       if (currentRef) observer.unobserve(currentRef)
     }
-  }, [animateOn, hasAnimated])
+  }, [animateOn])
 
   const hoverProps =
     animateOn === 'hover'
       ? {
-        onMouseEnter: () => setIsHovering(true),
-        onMouseLeave: () => setIsHovering(false),
-      }
+          onMouseEnter: () => setIsHovering(true),
+          onMouseLeave: () => setIsHovering(false),
+        }
       : {}
 
   return (

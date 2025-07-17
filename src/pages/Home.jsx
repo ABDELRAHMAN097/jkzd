@@ -155,7 +155,7 @@ const Home = () => {
             </div>
             {/* Abdelrahman Magdy */}
             <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">
-            Abdelrahman Magdy
+              Abdelrahman Magdy
             </h1>
 
             <p className="text-lg md:text-xl mb-6 max-w-2xl">
@@ -166,9 +166,9 @@ const Home = () => {
             </p>
             {/* button cv */}
             <Link to="https://drive.google.com/file/d/1M4NFtt8ou7qvoeo64fUTv-UeMMqwdjuX/view?usp=drive_link">
-            <button className="bg-white text-black px-6 py-2 rounded-full">
-              Download CV
-            </button>
+              <button className="bg-white text-black px-6 py-2 rounded-full">
+                Download CV
+              </button>
             </Link>
           </div>
           {/* 4taps */}
@@ -206,11 +206,9 @@ const Home = () => {
       </div>
 
       {/* Section Below */}
-      <div className="h-screen grid grid-cols-1 relative gap-4">
-        <div
-          style={{ width: "100%", height: "600px", position: "absolute" }}
-          className="z-0 overflow-hidden"
-        >
+      <div className="h-screen w-full flex flex-col justify-center items-center space-y-6 relative">
+        {/* Background */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
           <Beams
             beamWidth={2}
             beamHeight={15}
@@ -222,29 +220,22 @@ const Home = () => {
             rotation={17}
           />
         </div>
-        <div className="z-10">
-          <h3 className="text-4xl md:text-6xl font-bold mb-4 text-white">
-            cbvveve
-          </h3>
-        </div>
 
-        <div
-          className="z-10 text-white relative"
-          style={{
-            marginTop: "1rem",
-            minHeight: "50px",
-            zIndex: 50,
-          }}
-        >
-          <DecryptedText
-            text="Customize me"
-            speed={100}
-            maxIterations={20}
-            characters="ABCD1234!?"
-            animateOn="view"
-            parentClassName="all-letters"
-            encryptedClassName="encrypted"
-          />
+        {/* First Paragraph */}
+        <div className="relative z-10 flex justify-center items-center w-full">
+          <div className="w-full text-center text-white p-4 rounded">
+            <DecryptedText
+              className="text-5xl md:text-4xl font-bold justify-center"
+              text="I'm a passionate Frontend Developer with a strong eye for design and user experience.
+  I specialize in building modern, fast, and responsive websites using React, Next.js, and Tailwind CSS."
+              speed={100}
+              maxIterations={20}
+              characters="ABCD1234!?"
+              animateOn="view"
+              parentClassName="all-letters"
+              encryptedClassName="encrypted"
+            />
+          </div>
         </div>
       </div>
     </>
