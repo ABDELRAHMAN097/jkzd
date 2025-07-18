@@ -6,6 +6,13 @@ import DecryptedText from "../components/ReactBits/DecryptedText";
 import ScrollVelocity from "../components/ReactBits/ScrollVelocity ";
 import { Link } from "react-router-dom";
 import Headers from "../components/Headers";
+import GlassIcons from "../components/ReactBits/GlassIcons ";
+import { FiFileText } from "react-icons/fi";
+import { IoLogoJavascript } from "react-icons/io";
+import { SiNextdotjs, SiSass, SiTypescript } from "react-icons/si";
+import { FaReact } from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { TbBrandRedux } from "react-icons/tb";
 
 const Home = () => {
   const videoRef = useRef(null);
@@ -96,7 +103,20 @@ const Home = () => {
       desc: "Interactive, real-time interfaces with smooth animations.",
     },
   ];
-  
+
+  // skills
+
+  // update with your own icons and colors
+const items = [
+  { icon: <IoLogoJavascript  />, color: 'hsl(53.36deg 93.13% 54.31%)', label: 'Javascript' },
+  { icon: <SiTypescript />, color: 'blue', label: 'Typescript' },
+  { icon: <FaReact />, color: 'blue', label: 'React.js' },
+  { icon: <SiNextdotjs />, color: '#303030', label: 'Next.js' },
+  { icon: <RiTailwindCssFill />, color: 'blue', label: 'Tailwind' },
+  { icon: <SiSass />, color: '#c573f5', label: 'Sass' },
+  { icon: <TbBrandRedux />, color: 'blue', label: 'Redux' },
+];
+
   return (
     <>
       <div
@@ -180,7 +200,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Section Below */}
+      {/* About Section */}
       <div className="h-screen w-full flex flex-col justify-center items-center space-y-6 relative">
         {/* Background */}
         <div className="absolute inset-0 z-0 overflow-hidden">
@@ -195,54 +215,54 @@ const Home = () => {
             rotation={17}
           />
         </div>
+        <div className="max-w-[90%]">
+          {/* header */}
+          <div className="relative z-10 flex justify-start items-start w-full border-b border-secondary">
+            <Headers text="About Me" />
+          </div>
 
-        {/* header */}
-        <div className="relative z-10 flex justify-start items-start w-full border-b border-secondary">
-        <Headers text="About Me" />
-        </div>
-
-        {/* Second Paragraph */}
-        <div className="relative z-10 flex justify-center items-center w-full">
-          <div className="w-full text-center md:text-start text-white p-4 rounded">
-            <DecryptedText
-              className="text-2xl md:text-4xl justify-center leading-relaxed"
-              text="I'm a passionate Frontend Developer with a strong eye for design and user experience.
+          {/* Paragraph */}
+          <div className="relative z-10 flex justify-center items-center w-full">
+            <div className="w-full text-center md:text-start text-white p-4 rounded">
+              <DecryptedText
+                className="text-2xl md:text-4xl justify-center leading-relaxed"
+                text="I'm a passionate Frontend Developer with a strong eye for design and user experience.
   I specialize in building modern, fast, and responsive websites using React, Next.js, and Tailwind CSS."
-              speed={100}
-              maxIterations={20}
-              characters="ABCD1234!?"
-              animateOn="view"
-              parentClassName="all-letters"
-              encryptedClassName="encrypted"
-            />
+                speed={100}
+                maxIterations={20}
+                characters="ABCD1234!?"
+                animateOn="view"
+                parentClassName="all-letters"
+                encryptedClassName="encrypted"
+              />
+            </div>
           </div>
         </div>
       </div>
 
       {/* skils section */}
-      <div>
-      <div className="-skew-x-44">
-        <ScrollVelocity
-          texts={["Boody Magdy", "My Skils"]}
-          velocity={150}
-          className="custom-scroll-text text-secondary skew-x-16"
-        />
-      </div>
-
-      <div className="h-screen grid grid-cols-1 md:grid-cols-2">
-
-         {/* header */}
-      <div className="flex justify-center md:justify-start items-center col-span-1 ">
-        <Headers text="My Skills" />
+      <div className="">
+        <div className="-skew-x-44">
+          <ScrollVelocity
+            texts={["Boody Magdy", "My Skils"]}
+            velocity={150}
+            className="custom-scroll-text text-secondary skew-x-16"
+          />
         </div>
-
-        <div className="flex justify-center items-center col-span-1">
-        
+        <div className="max-w-[90%] mx-auto">
+          <div className="h-screen grid grid-cols-1 md:grid-cols-2">
+            {/* header */}
+            <div className="flex justify-center md:justify-start items-center col-span-1 ">
+              <Headers text="My Skills" />
+            </div>
+            {/* icons */}
+            <div className="flex justify-center items-center col-span-1">
+              <div>
+                <GlassIcons items={items} className="custom-class" />
+              </div>
+            </div>
+          </div>
         </div>
-
-
-      </div>
-        
       </div>
     </>
   );
