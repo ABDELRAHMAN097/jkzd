@@ -109,7 +109,6 @@ const Home = () => {
   // ];
 
   // skills
-
   // update with your own icons and colors
   const items = [
     {
@@ -125,8 +124,8 @@ const Home = () => {
     { icon: <TbBrandRedux />, color: "purple", label: "Redux" }, 
     { icon: <FaShopify />, color: "#3da84b", label: "Shopify" },
   ];
-  // Tools
 
+  // Tools
   // update with your own icons and colors
   const toolsItems = [
     { icon: <FaGitAlt />, color: "red", label: "Git" },
