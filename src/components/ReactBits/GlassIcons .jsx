@@ -27,7 +27,7 @@ const GlassIcons = ({ items, className }) => {
           className={`relative bg-transparent outline-none w-[4.5em] h-[4.5em] [perspective:24em] [transform-style:preserve-3d] [-webkit-tap-highlight-color:transparent] group ${item.customClass || ""
             }`}
         >
-          {/* الخلفية الأمامية */}
+          {/* front*/}
           <span
             className={`absolute top-0 left-0 w-full h-full rounded-[1.25em] block transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.83,0,0.17,1)] origin-[100%_100%] rotate-[15deg] group-hover:[transform:rotate(25deg)_translate3d(-0.5em,-0.5em,0.5em)] force-hover-front`}
             style={{
@@ -36,19 +36,19 @@ const GlassIcons = ({ items, className }) => {
             }}
           ></span>
 
-          {/* الخلفية الزجاجية */}
+          {/*  background */}
           <span
             className={`absolute top-0 left-0 w-full h-full rounded-[1.25em] bg-[hsla(0,0%,100%,0.15)] transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.83,0,0.17,1)] origin-[80%_50%] flex backdrop-blur-[0.75em] [-webkit-backdrop-filter:blur(0.75em)] group-hover:[transform:translateZ(2em)] force-hover-back`}
             style={{
               boxShadow: "0 0 0 0.1em hsla(0, 0%, 100%, 0.3) inset",
             }}
           >
-            <span className="m-auto w-[1.5em] h-[1.5em] text-[#acacac] flex items-center justify-center" aria-hidden="true">
+            <span className="m-auto text-2xl w-[2em] h-[2em] text-[#acacac] flex items-center justify-center" aria-hidden="true">
               {item.icon}
             </span>
           </span>
 
-          {/* الاسم تحت */}
+          {/* name*/}
           <span className="absolute top-full left-0 right-0 text-[#dadada] text-center whitespace-nowrap leading-[2] text-base opacity-0 transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.83,0,0.17,1)] translate-y-0 group-hover:opacity-100 group-hover:[transform:translateY(20%)] force-hover">
             {item.label}
           </span>

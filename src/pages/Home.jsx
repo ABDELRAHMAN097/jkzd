@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import BlurText from "../components/ReactBits/BlurText";
 import TextPressure from "../components/ReactBits/TextPressure";
 import Beams from "../components/ReactBits/Beams";
@@ -7,12 +7,16 @@ import ScrollVelocity from "../components/ReactBits/ScrollVelocity ";
 import { Link } from "react-router-dom";
 import Headers from "../components/Headers";
 import GlassIcons from "../components/ReactBits/GlassIcons ";
-import { FiFileText } from "react-icons/fi";
+import Tools from "../components/ReactBits/Tools";
 import { IoLogoJavascript } from "react-icons/io";
-import { SiNextdotjs, SiSass, SiTypescript } from "react-icons/si";
-import { FaReact } from "react-icons/fa";
+import { SiNextdotjs, SiSass, SiTypescript, SiVite } from "react-icons/si";
+import { FaDribbble, FaGitAlt, FaGithubAlt, FaReact } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { TbBrandRedux } from "react-icons/tb";
+import { FaShopify } from "react-icons/fa";
+import { VscVscode } from "react-icons/vsc";
+import { MdAnimation } from "react-icons/md";
+
 
 const Home = () => {
   const videoRef = useRef(null);
@@ -79,43 +83,61 @@ const Home = () => {
   }, []);
 
   // 4taps
-  const [flippedIndex, setFlippedIndex] = useState(null);
+  // const [flippedIndex, setFlippedIndex] = useState(null);
 
-  const toggleFlip = (index) => {
-    setFlippedIndex((prev) => (prev === index ? null : index));
-  };
+  // const toggleFlip = (index) => {
+  //   setFlippedIndex((prev) => (prev === index ? null : index));
+  // };
 
-  const features = [
-    {
-      title: "UI Design",
-      desc: "Clean, attractive design that reflects the brand identity.",
-    },
-    {
-      title: "Responsive & Compatible",
-      desc: "Seamless experience across all screen sizes and devices.",
-    },
-    {
-      title: "Performance",
-      desc: "Fast loading speeds and optimized assets.",
-    },
-    {
-      title: "Interactivity & UX",
-      desc: "Interactive, real-time interfaces with smooth animations.",
-    },
-  ];
+  // const features = [
+  //   {
+  //     title: "UI Design",
+  //     desc: "Clean, attractive design that reflects the brand identity.",
+  //   },
+  //   {
+  //     title: "Responsive & Compatible",
+  //     desc: "Seamless experience across all screen sizes and devices.",
+  //   },
+  //   {
+  //     title: "Performance",
+  //     desc: "Fast loading speeds and optimized assets.",
+  //   },
+  //   {
+  //     title: "Interactivity & UX",
+  //     desc: "Interactive, real-time interfaces with smooth animations.",
+  //   },
+  // ];
 
   // skills
 
   // update with your own icons and colors
-const items = [
-  { icon: <IoLogoJavascript  />, color: 'hsl(53.36deg 93.13% 54.31%)', label: 'Javascript' },
-  { icon: <SiTypescript />, color: 'blue', label: 'Typescript' },
-  { icon: <FaReact />, color: 'blue', label: 'React.js' },
-  { icon: <SiNextdotjs />, color: '#303030', label: 'Next.js' },
-  { icon: <RiTailwindCssFill />, color: 'blue', label: 'Tailwind' },
-  { icon: <SiSass />, color: '#c573f5', label: 'Sass' },
-  { icon: <TbBrandRedux />, color: 'blue', label: 'Redux' },
-];
+  const items = [
+    {
+      icon: <IoLogoJavascript />,
+      color: "hsl(53.36deg 93.13% 54.31%)",
+      label: "Javascript",
+    },
+    { icon: <SiTypescript />, color: "blue", label: "Typescript" },
+    { icon: <FaReact />, color: "indigo", label: "React.js" },
+    { icon: <SiNextdotjs />, color: "#303030", label: "Next.js" },
+    { icon: <RiTailwindCssFill />, color: "#004574", label: "Tailwind" },
+    { icon: <SiSass />, color: "#9449be", label: "Sass" },
+    { icon: <TbBrandRedux />, color: "purple", label: "Redux" }, 
+    { icon: <FaShopify />, color: "#3da84b", label: "Shopify" },
+  ];
+  // Tools
+
+  // update with your own icons and colors
+  const toolsItems = [
+    { icon: <FaGitAlt />, color: "red", label: "Git" },
+    { icon: <img src="/image/gsap.png" alt=" Logo" width={40} /> , color: "white", label: "GSAP" },
+    { icon: <img src="/image/favicon.svg" alt="Windsurf" width={40} /> , color: "white", label: "Windsurf" },
+    { icon: <img src="/image/Framer Motion.png" alt="Windsurf" width={40} /> , color: "white", label: "Framer Motion" },
+    { icon: <VscVscode />, color: "indigo", label: "Vscode" },
+    { icon: <FaGithubAlt />, color: "#303030", label: "Github" },
+    { icon: <FaDribbble />, color: "#9449be", label: "Dribbble" },
+    { icon: <SiVite />, color: "#9449be", label: "Vite" },
+  ];
 
   return (
     <>
@@ -225,9 +247,10 @@ const items = [
           <div className="relative z-10 flex justify-center items-center w-full">
             <div className="w-full text-center md:text-start text-white p-4 rounded">
               <DecryptedText
-                className="text-2xl md:text-4xl justify-center leading-relaxed"
-                text="I'm a passionate Frontend Developer with a strong eye for design and user experience.
-  I specialize in building modern, fast, and responsive websites using React, Next.js, and Tailwind CSS."
+                className="text-xl md:text-2xl justify-center leading-relaxed"
+                text="I'm a creative and detail-oriented Frontend Developer with a strong passion for crafting exceptional user experiences. I specialize in building high-performance, visually appealing, and fully responsive websites using modern technologies like React, Next.js, and Tailwind CSS.
+I have a sharp eye for design and a deep understanding of UI/UX principles, which allows me to transform ideas into smooth, engaging digital experiences. I love turning complex problems into simple, elegant solutions — and I'm always eager to learn and stay up-to-date with the latest trends in frontend development.
+Beyond writing code, I enjoy collaborating with teams and designers to bring ideas to life and deliver real value to users"
                 speed={100}
                 maxIterations={20}
                 characters="ABCD1234!?"
@@ -241,10 +264,11 @@ const items = [
       </div>
 
       {/* skils section */}
+
       <div className="">
         <div className="-skew-x-44">
           <ScrollVelocity
-            texts={["Boody Magdy", "My Skils"]}
+            texts={["Boody Magdy", "Skills & Tools"]}
             velocity={150}
             className="custom-scroll-text text-secondary skew-x-16"
           />
@@ -262,8 +286,23 @@ const items = [
               </div>
             </div>
           </div>
+          {/* tools */}
+          <div className="h-screen grid grid-cols-1 md:grid-cols-2">
+            {/* header */}
+            <div className="flex justify-center md:justify-start items-center col-span-1 ">
+              <Headers text="My Tools" />
+            </div>
+            {/* icons */}
+            <div className="flex justify-center items-center col-span-1">
+              <div>
+                <Tools Tools={toolsItems} className="custom-class" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
+      
     </>
   );
 };
