@@ -1,6 +1,6 @@
 import React from "react";
 
-const About = () => {
+const Projects = () => {
   return (
     <div className="grid grid-cols-1 p-2 md:p-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 mt-[70px]">
@@ -16,4 +16,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Projects;

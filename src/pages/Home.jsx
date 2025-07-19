@@ -16,6 +16,7 @@ import { TbBrandRedux } from "react-icons/tb";
 import { FaShopify } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
 import { MdAnimation } from "react-icons/md";
+import Projects from "./Projects";
 
 
 const Home = () => {
@@ -262,7 +263,7 @@ Beyond writing code, I enjoy collaborating with teams and designers to bring ide
         </div>
       </div>
 
-      {/* skils section */}
+      {/* skils & Tools section */}
 
       <div className="">
         <div className="-skew-x-44">
@@ -278,7 +279,7 @@ Beyond writing code, I enjoy collaborating with teams and designers to bring ide
             <div className="flex justify-center md:justify-start items-center col-span-1 ">
               <Headers text="My Skills" />
             </div>
-            {/* icons */}
+            {/* Tools */}
             <div className="flex justify-center items-center col-span-1">
               <div>
                 <GlassIcons items={items} className="custom-class" />
@@ -301,6 +302,8 @@ Beyond writing code, I enjoy collaborating with teams and designers to bring ide
         </div>
       </div>
 
+      {/* Projects */}
+      <Projects />
       
     </>
   );
