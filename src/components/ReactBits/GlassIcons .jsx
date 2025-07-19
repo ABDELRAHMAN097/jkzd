@@ -10,11 +10,16 @@ const gradientMapping = {
 };
 
 const GlassIcons = ({ items, className }) => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
   const getBackgroundStyle = (color) => {
-    if (gradientMapping[color]) {
-      return { background: gradientMapping[color] };
-    }
-    return { background: color };
+    return {
+      background: gradientMapping[color] || color,
+    };
+  };
+
+  const handleTouch = (index) => {
+    setActiveIndex((prev) => (prev === index ? null : index));
   };
 
   return (
@@ -22,24 +27,21 @@ const GlassIcons = ({ items, className }) => {
       className={`grid gap-[5em] grid-cols-2 md:grid-cols-3 mx-auto py-[3em] overflow-visible ${className || ""}`}
     >
       {items.map((item, index) => {
-        const [isActive, setIsActive] = useState(false);
-
-        const handleTouch = () => {
-          setIsActive(!isActive);
-        };
+        const isActive = activeIndex === index;
 
         return (
           <button
             key={index}
             type="button"
             aria-label={item.label}
-            onTouchStart={handleTouch}
-            className={`relative bg-transparent outline-none w-[4.5em] h-[4.5em] [perspective:24em] [transform-style:preserve-3d] [-webkit-tap-highlight-color:transparent] group ${item.customClass || ""
+            onTouchStart={() => handleTouch(index)}
+            onClick={() => handleTouch(index)}
+            className={`relative bg-transparent outline-none w-[4.5em] h-[4.5em] [perspective:24em] [transform-style:preserve-3d] [-webkit-tap-highlight-color:transparent] group transition-all duration-500 ease-in-out ${item.customClass || ""
               }`}
           >
             {/* front */}
             <span
-              className={`absolute top-0 left-0 w-full h-full rounded-[1.25em] block transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.83,0,0.17,1)] origin-[100%_100%] rotate-[15deg]
+              className={`absolute top-0 left-0 w-full h-full rounded-[1.25em] block transition-all duration-500 ease-in-out origin-[100%_100%] rotate-[15deg]
               ${isActive
                   ? "rotate-[25deg] translate-x-[-0.5em] translate-y-[-0.5em] translate-z-[0.5em]"
                   : "group-hover:rotate-[25deg] group-hover:translate-x-[-0.5em] group-hover:translate-y-[-0.5em] group-hover:translate-z-[0.5em]"
@@ -52,7 +54,7 @@ const GlassIcons = ({ items, className }) => {
 
             {/* background */}
             <span
-              className={`absolute top-0 left-0 w-full h-full rounded-[1.25em] bg-[hsla(0,0%,100%,0.15)] transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.83,0,0.17,1)] origin-[80%_50%] flex backdrop-blur-[0.75em] [-webkit-backdrop-filter:blur(0.75em)]
+              className={`absolute top-0 left-0 w-full h-full rounded-[1.25em] bg-[hsla(0,0%,100%,0.15)] transition-all duration-500 ease-in-out origin-[80%_50%] flex backdrop-blur-[0.75em] [-webkit-backdrop-filter:blur(0.75em)]
               ${isActive
                   ? "translate-z-[2em]"
                   : "group-hover:translate-z-[2em]"
@@ -68,10 +70,10 @@ const GlassIcons = ({ items, className }) => {
 
             {/* name */}
             <span
-              className={`absolute top-full left-0 right-0 text-[#dadada] text-center whitespace-nowrap leading-[2] text-base opacity-0 transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.83,0,0.17,1)]
+              className={`absolute top-full left-0 right-0 text-[#dadada] text-center whitespace-nowrap leading-[2] text-base transition-all duration-500 ease-in-out
               ${isActive
                   ? "opacity-100 translate-y-[20%]"
-                  : "group-hover:opacity-100 group-hover:translate-y-[20%]"
+                  : "opacity-0 group-hover:opacity-100 group-hover:translate-y-[20%]"
                 }`}
             >
               {item.label}
