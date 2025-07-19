@@ -34,16 +34,19 @@ const GlassIcons = ({ items, className }) => {
             key={index}
             type="button"
             aria-label={item.label}
-            onTouchStart={() => handleInteraction(index)}
             onClick={() => handleInteraction(index)}
             className={`relative bg-transparent outline-none w-[4.5em] h-[4.5em] [perspective:24em] [transform-style:preserve-3d] [-webkit-tap-highlight-color:transparent] group`}
           >
             {/* front */}
             <span
               className={`absolute top-0 left-0 w-full h-full rounded-[1.25em] block origin-[100%_100%] rotate-[15deg]
-              transition-all duration-500 ease-in-out
-              ${isActive ? "rotate-[25deg] translate-x-[-0.5em] translate-y-[-0.5em] translate-z-[0.5em]" : ""}
-              group-hover:rotate-[25deg] group-hover:translate-x-[-0.5em] group-hover:translate-y-[-0.5em] group-hover:translate-z-[0.5em]`}
+                transition-all duration-500 ease-in-out
+                ${
+                  isActive
+                    ? "rotate-[25deg] translate-x-[-0.5em] translate-y-[-0.5em] translate-z-[0.5em]"
+                    : ""
+                }
+                md:group-hover:rotate-[25deg] md:group-hover:translate-x-[-0.5em] md:group-hover:translate-y-[-0.5em] md:group-hover:translate-z-[0.5em]`}
               style={{
                 ...getBackgroundStyle(item.color),
                 boxShadow: "0.5em -0.5em 0.75em hsla(223, 10%, 10%, 0.15)",
@@ -53,9 +56,9 @@ const GlassIcons = ({ items, className }) => {
             {/* background */}
             <span
               className={`absolute top-0 left-0 w-full h-full rounded-[1.25em] bg-[hsla(0,0%,100%,0.15)] flex backdrop-blur-[0.75em] [-webkit-backdrop-filter:blur(0.75em)]
-              transition-all duration-500 ease-in-out origin-[80%_50%]
-              ${isActive ? "translate-z-[2em]" : ""}
-              group-hover:translate-z-[2em]`}
+                transition-all duration-500 ease-in-out origin-[80%_50%]
+                ${isActive ? "translate-z-[2em]" : ""}
+                md:group-hover:translate-z-[2em]`}
               style={{
                 boxShadow: "0 0 0 0.1em hsla(0, 0%, 100%, 0.3) inset",
               }}
@@ -68,9 +71,13 @@ const GlassIcons = ({ items, className }) => {
             {/* name */}
             <span
               className={`absolute top-full left-0 right-0 text-[#dadada] text-center whitespace-nowrap leading-[2] text-base
-              transition-all duration-500 ease-in-out
-              ${isActive ? "opacity-100 translate-y-[20%]" : "opacity-0"}
-              group-hover:opacity-100 group-hover:translate-y-[20%]`}
+                transition-all duration-500 ease-in-out
+                ${
+                  isActive
+                    ? "opacity-100 translate-y-[20%]"
+                    : "opacity-0 translate-y-0"
+                }
+                md:group-hover:opacity-100 md:group-hover:translate-y-[20%]`}
             >
               {item.label}
             </span>
