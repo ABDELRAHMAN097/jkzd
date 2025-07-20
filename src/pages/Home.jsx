@@ -213,7 +213,7 @@ const Home = () => {
               Smooth Fast Responsive Just like your users expect
             </p>
             {/* button cv */}
-            <Link to="https://drive.google.com/file/d/1M4NFtt8ou7qvoeo64fUTv-UeMMqwdjuX/view?usp=drive_link">
+            <Link target="_blank" to="https://drive.google.com/file/d/1M4NFtt8ou7qvoeo64fUTv-UeMMqwdjuX/view?usp=drive_link">
               <button className="flex items-center gap-2 bg-white text-secondary px-6 py-2 rounded-full">
               <ImCloudDownload /> CV
               </button>
