@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { ImCloudDownload } from "react-icons/im";
 import BlurText from "../components/ReactBits/BlurText";
 import TextPressure from "../components/ReactBits/TextPressure";
 import Beams from "../components/ReactBits/Beams";
@@ -198,7 +199,7 @@ const Home = () => {
               />
             </div>
             {/* Abdelrahman Magdy */}
-            <h1 className="text-3xl md:text-5xl text-secondary font-bold mb-4">
+            <h1 className="text-3xl md:text-5xl text-secondary font-roboto font-bold mb-4" style={{ fontStretch: '125%' }}>
               Abdelrahman Magdy
             </h1>
 
@@ -213,8 +214,8 @@ const Home = () => {
             </p>
             {/* button cv */}
             <Link to="https://drive.google.com/file/d/1M4NFtt8ou7qvoeo64fUTv-UeMMqwdjuX/view?usp=drive_link">
-              <button className="bg-secondary text-black px-6 py-2 rounded-full">
-                Download CV
+              <button className="flex items-center gap-2 bg-white text-secondary px-6 py-2 rounded-full">
+              <ImCloudDownload /> CV
               </button>
             </Link>
           </div>
@@ -277,7 +278,7 @@ Beyond writing code, I enjoy collaborating with teams and designers to bring ide
           <div className="h-screen grid grid-cols-1 md:grid-cols-2">
             {/* header */}
             <div className="flex justify-center md:justify-start items-center col-span-1 ">
-              <Headers text="My Skills" />
+              <Headers text="Skills" />
             </div>
             {/* Tools */}
             <div className="flex justify-center items-center col-span-1">
@@ -290,7 +291,7 @@ Beyond writing code, I enjoy collaborating with teams and designers to bring ide
           <div className="h-screen grid grid-cols-1 md:grid-cols-2">
             {/* header */}
             <div className="flex justify-center md:justify-start items-center col-span-1 ">
-              <Headers text="My Tools" />
+              <Headers text="Tools" />
             </div>
             {/* icons */}
             <div className="flex justify-center items-center col-span-1">

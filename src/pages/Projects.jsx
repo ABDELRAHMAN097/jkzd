@@ -1,18 +1,35 @@
 import React from "react";
+import FlowingMenu from "../components/ReactBits/FlowingMenu";
 
 const Projects = () => {
+  const demoItems = [
+    {
+      link: "#",
+      text: "Mojave",
+      image: "https://picsum.photos/600/400?random=1",
+    },
+    {
+      link: "#",
+      text: "Sonoma",
+      image: "https://picsum.photos/600/400?random=2",
+    },
+    {
+      link: "#",
+      text: "Monterey",
+      image: "https://picsum.photos/600/400?random=3",
+    },
+    {
+      link: "#",
+      text: "Sequoia",
+      image: "https://picsum.photos/600/400?random=4",
+    },
+  ];
   return (
-    <div className="grid grid-cols-1 p-2 md:p-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 mt-[70px]">
-        <div className="flex justify-center items-center col-span-1 text-white bg-amber-500 min-h-36 rounded-0 md:rounded-br-2xl">1</div>
-        <div className="flex justify-center items-center col-span-1 text-white bg-red-500 min-h-36 rounded-0 md:rounded-bl-2xl rounded-0 md:rounded-tr-2xl">2</div>
-        <div className="flex justify-center items-center col-span-1 md:col-span-2 text-white bg-blue-500 min-h-36 rounded-0 md:rounded-tl-2xl">3</div>
-        <div className="flex justify-center items-center col-span-1 text-white bg-green-500 min-h-36 rounded-0 md:rounded-tr-2xl">4</div>
-        <div className="flex justify-center items-center col-span-1 text-white bg-black min-h-36 rounded-0 md:rounded-tl-2xl">5</div>
-        <div className="flex justify-center items-center col-span-1 text-white bg-fuchsia-500 min-h-36">6</div>
-        <div className="flex justify-center items-center col-span-1 text-white bg-indigo-500 min-h-36">7</div>
+    
+      <div className="grid grid-cols-1 max-w-[90%] mx-auto">
+        <FlowingMenu items={demoItems} />
       </div>
-    </div>
+    
   );
 };
 
