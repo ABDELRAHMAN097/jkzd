@@ -204,14 +204,18 @@ const Home = () => {
             <motion.h1 
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.1 }}
             className="text-3xl md:text-5xl text-secondary font-roboto font-bold mb-4" style={{ fontStretch: '125%' }}
             >
               Abdelrahman Magdy
             </motion.h1>
 
-            <p
+            <motion.p
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.1 }}
               style={{ fontFamily: "var(--font-family-text)" }}
               className="text-lg md:text-xl mb-6 max-w-2xl"
             >
@@ -219,13 +223,18 @@ const Home = () => {
               interfaces
               <br />
               Smooth Fast Responsive Just like your users expect
-            </p>
+            </motion.p>
             {/* button cv */}
-            <Link target="_blank" to="https://drive.google.com/file/d/1M4NFtt8ou7qvoeo64fUTv-UeMMqwdjuX/view?usp=drive_link">
+            <motion.Link 
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.1 }}
+            target="_blank" to="https://drive.google.com/file/d/1M4NFtt8ou7qvoeo64fUTv-UeMMqwdjuX/view?usp=drive_link">
               <button className="flex items-center gap-2 bg-white text-secondary px-6 py-2 rounded-full">
               <ImCloudDownload /> CV
               </button>
-            </Link>
+            </motion.Link>
           </div>
           {/* 4taps */}
         </div>

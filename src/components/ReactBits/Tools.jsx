@@ -31,7 +31,11 @@ const Tools = ({ Tools, className }) => {
         const isActive = activeIndex === index;
 
         return (
-          <button
+          <motion.button
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.1 }}
             key={index}
             type="button"
             aria-label={Tool.label}
@@ -72,7 +76,7 @@ const Tools = ({ Tools, className }) => {
             >
               {Tool.label}
             </span>
-          </button>
+          </motion.button>
         );
       })}
     </div>
