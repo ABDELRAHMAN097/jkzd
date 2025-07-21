@@ -16,7 +16,7 @@ const Experience = () => {
               experience.map((item, idx) => (
                 <div
                   onClick={() => setSelectedIndex(idx)}
-                  className={`group cursor-pointer border-b border-secondary flex gap-4 items-start py-4 ${
+                  className={`group cursor-pointer ${idx !== experience.length - 1 ? 'border-b border-secondary' : ''} flex gap-4 items-start py-4 ${
                     selectedIndex === idx ? 'text-white' : 'text-[#adadad]'
                   }`}
                   key={idx}

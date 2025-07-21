@@ -8,7 +8,7 @@ const Footer = () => {
       {
         footer.map((item, i) => (
           <div
-          className='min-h-44 flex flex-col items-center justify-end gap-3 pb-8 text-white'
+          className='min-h-44 flex flex-col items-center justify-end gap-3 py-8 text-white'
           key={i}
           >
 
@@ -30,7 +30,7 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.1 }}
-            className='flex flex-col items-center justify-center gap-3 text-white text-xl md:text-4xl'
+            className='flex flex-col items-center justify-center gap-3 text-white text-xl md:text-5xl'
             style={{ fontFamily: 'var(--font-family-Anton)' }}
           >
            
