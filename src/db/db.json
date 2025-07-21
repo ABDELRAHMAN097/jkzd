@@ -1,16 +1,16 @@
 {
     "experience": [
       {
-        "company": "Strativ AB",
-        "position": "Software Engineer (Frontend)",
-        "start_date": "Dec 2024",
+        "company": "All Safe",
+        "position": "Frontend Developer",
+        "start_date": "APR 2025",
         "end_date": "Present"
       },
       {
-        "company": "Epikcoders",
+        "company": "Code Craft",
         "position": "Frontend Developer",
-        "start_date": "Oct 2023",
-        "end_date": "Nov 2024"
+        "start_date": "Nov 2024",
+        "end_date": "MAR 2025"
       }
     ],
     "selected_projects": [
@@ -221,8 +221,8 @@
                 ]
               },
               "preview_images": [
-                "/image/project`s/home (2).png", 
-                "/image/project`s/dashboard.png"
+                "/image/projects/dashboard.png", 
+                "/image/projects/dashboard.png"
               ],
               "contact": "tasmiroilislam@gmail.com",
               "designer": "Tajmirul Islam",
@@ -233,6 +233,14 @@
             }
             
       ]
+      }
+    ],
+    "footer" : [
+      {
+        "qu" : "are you need website?",
+        "gmaill" : "bodymagdy097@gmail.com",
+        "tel" : "0201023671214",
+        "pra" : "Design & built by Abdelrahman Magdy"
       }
     ]
    

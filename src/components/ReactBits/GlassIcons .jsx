@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const gradientMapping = {
   blue: "linear-gradient(hsl(223, 90%, 50%), hsl(208, 90%, 50%))",
@@ -30,7 +31,11 @@ const GlassIcons = ({ items, className }) => {
         const isActive = activeIndex === index;
 
         return (
-          <button
+          <motion.button
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.1 }}
             key={index}
             type="button"
             aria-label={item.label}
@@ -81,7 +86,7 @@ const GlassIcons = ({ items, className }) => {
             >
               {item.label}
             </span>
-          </button>
+          </motion.button>
         );
       })}
     </div>

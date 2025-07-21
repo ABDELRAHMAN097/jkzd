@@ -16,8 +16,10 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { TbBrandRedux } from "react-icons/tb";
 import { FaShopify } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
-import { MdAnimation } from "react-icons/md";
 import Projects from "./Projects";
+import Experience from "../components/Experience";
+import Footer from "../components/Footer";
+import { motion } from "framer-motion";
 
 
 const Home = () => {
@@ -199,9 +201,15 @@ const Home = () => {
               />
             </div>
             {/* Abdelrahman Magdy */}
-            <h1 className="text-3xl md:text-5xl text-secondary font-roboto font-bold mb-4" style={{ fontStretch: '125%' }}>
+            <motion.h1 
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.1 }}
+            className="text-3xl md:text-5xl text-secondary font-roboto font-bold mb-4" style={{ fontStretch: '125%' }}
+            >
               Abdelrahman Magdy
-            </h1>
+            </motion.h1>
 
             <p
               style={{ fontFamily: "var(--font-family-text)" }}
@@ -282,9 +290,14 @@ Beyond writing code, I enjoy collaborating with teams and designers to bring ide
             </div>
             {/* Tools */}
             <div className="flex justify-center items-center col-span-1">
-              <div>
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+                viewport={{ once: false, amount: 0.1 }}
+              >
                 <GlassIcons items={items} className="custom-class" />
-              </div>
+              </motion.div>
             </div>
           </div>
           {/* tools */}
@@ -295,17 +308,25 @@ Beyond writing code, I enjoy collaborating with teams and designers to bring ide
             </div>
             {/* icons */}
             <div className="flex justify-center items-center col-span-1">
-              <div>
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+                viewport={{ once: false, amount: 0.1 }}
+              >
                 <Tools Tools={toolsItems} className="custom-class" />
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
       </div>
 
+      {/* Experience */}
+      <Experience />
       {/* Projects */}
       <Projects />
-      
+      {/* Footer */}
+      <Footer />
     </>
   );
 };
