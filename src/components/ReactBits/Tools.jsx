@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const gradientMapping = {
   blue: "linear-gradient(hsl(223, 90%, 50%), hsl(208, 90%, 50%))",

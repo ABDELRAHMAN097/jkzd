@@ -225,16 +225,13 @@ const Home = () => {
               Smooth Fast Responsive Just like your users expect
             </motion.p>
             {/* button cv */}
-            <motion.Link 
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            viewport={{ once: false, amount: 0.1 }}
-            target="_blank" to="https://drive.google.com/file/d/1M4NFtt8ou7qvoeo64fUTv-UeMMqwdjuX/view?usp=drive_link">
+            <Link   
+            
+            target="_blank" href="https://drive.google.com/file/d/1M4NFtt8ou7qvoeo64fUTv-UeMMqwdjuX/view?usp=drive_link">
               <button className="flex items-center gap-2 bg-white text-secondary px-6 py-2 rounded-full">
               <ImCloudDownload /> CV
               </button>
-            </motion.Link>
+            </Link> 
           </div>
           {/* 4taps */}
         </div>
