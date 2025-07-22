@@ -142,6 +142,10 @@ const Home = () => {
     { icon: <SiVite />, color: "#9449be", label: "Vite" },
   ];
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="grid grid-cols-1 min-h-[100dvh] gap-4">
       <div
@@ -228,7 +232,7 @@ const Home = () => {
             <Link   
             
             target="_blank" href="https://drive.google.com/file/d/1M4NFtt8ou7qvoeo64fUTv-UeMMqwdjuX/view?usp=drive_link">
-              <button className="flex items-center gap-2 bg-white text-secondary px-6 rounded-full">
+              <button className="flex items-center gap-2 bg-white text-secondary px-6 py-2 rounded-full">
               <ImCloudDownload /> CV
               </button>
             </Link> 
