@@ -284,7 +284,7 @@ Beyond writing code, I enjoy collaborating with teams and designers to bring ide
 
       {/* skils & Tools section */}
 
-      <div className="">
+      <div className="mb-8">
         <div className="-skew-x-44">
           <ScrollVelocity
             texts={["Boody Magdy", "Skills & Tools"]}
