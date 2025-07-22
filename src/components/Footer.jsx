@@ -4,19 +4,21 @@ import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <div className='grid grid-cols-1 w-full'>
+    <div className='grid grid-cols-1 w-full p-5'>
       {
         footer.map((item, i) => (
           <div
-          className='min-h-84 max-h-screen flex flex-col items-center justify-end gap-3 text-white'
+          className='flex flex-col items-center justify-end gap-3 text-white'
           key={i}
           >
+              
+
           <motion.p
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.1 }}
-            className='flex flex-col items-center justify-center gap-3 text-white'
+            className='text-white'
           >
             {item.qu}
           </motion.p>
@@ -25,7 +27,7 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.1 }}
-            className='flex flex-col items-center justify-center gap-3 text-white text-xl md:text-5xl'
+            className='text-secondary text-xl md:text-5xl'
             style={{ fontFamily: 'var(--font-family-Anton)' }}
           >
            
@@ -38,7 +40,7 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.1 }}
-            className='flex flex-col items-center justify-center gap-3 text-white'
+            className='text-white'
           >
            
             {item.tel}
@@ -50,12 +52,14 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.1 }}
-            className='flex flex-col items-center justify-center gap-3 text-secondary'
+            className='text-white'
           >
            
             {item.pra}
            
           </motion.p>
+
+        
 
           </div>
 
