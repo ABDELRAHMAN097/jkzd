@@ -9,7 +9,7 @@ const Projects = () => {
   const [selectedIndex, setSelectedIndex] = useState(null);
 
   return (
-    <div className='max-w-[90%] mx-auto py-8'>
+    <div className='max-w-[90%] min-h-screen mx-auto py-8'>
       <Headers text="Projects" />
       <div className="w-full">
         {
@@ -32,7 +32,7 @@ const Projects = () => {
                   <p className='text-2xl md:text-7xl uppercase tracking-wider'>{project.p_name}</p>
                   {/* icon */}
                   <Link 
-                   to={`/Projects/${project.id}`}
+                   to={`/project/${project.id}`} 
                   >
                     <HiLink className={`
                       text-green-400 text-xl md:text-3xl

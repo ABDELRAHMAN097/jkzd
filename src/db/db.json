@@ -1,248 +1,218 @@
 {
-    "experience": [
-      {
-        "company": "All Safe",
-        "position": "Frontend Developer",
-        "start_date": "APR 2025",
-        "end_date": "Present"
-      },
-      {
-        "company": "Code Craft",
-        "position": "Frontend Developer",
-        "start_date": "Nov 2024",
-        "end_date": "MAR 2025"
-      }
-    ],
-    "selected_projects": [
-      {
-        "id": "01",
-        "link": "https://totostore.vercel.app/",
-        "p_name": "Totostore",
-        "stack": ["next.js","tellwind css","firebase"],
-        "details": [
-          {
-              "title": "Totostore",
-              "link": "https://totostore.vercel.app/",
-              "year": 2024,
-              "tech_stack": [
-                "Next.js",
-                "Tailwind CSS",
-                "react-icons",
-                "firebase"
-              ],
-              "description": "websitethat sells men's and women'sclothing and accessories.",
-              "key_features": [
-                "⚙️ Service Display System: Interactive service showcase with synchronized sliders",
-                "📰 Blog Management: SEO-friendly blog with categorization and search",
-                "🛍️ Product Catalog: Organized product display with filtering capabilities",
-                "📱 Fully Responsive: Optimized for all device sizes",
-                "⚡ Fast Performance: Optimized Next.js frontend with ISR (Incremental Static Regeneration)"
-              ],
-              "technical_highlights": [
-                "Implemented complex slider synchronization logic using Swiper.js",
-                "Customized Payload CMS admin panel for intuitive content management",
-                "Developed reusable UI components with shadcn for design consistency",
-                "Configured efficient data fetching strategies in Next.js"
-              ],
-              "role": {
-                "position": "Full-Stack Developer",
-                "responsibilities": [
-                  "✅ Backend: Configured Payload CMS with custom collections for services, blogs, and products",
-                  "✅ Frontend: Built all UI components using Tailwind CSS and shadcn",
-                  "✅ State Management: Implemented client-side data fetching and caching",
-                  "✅ CMS Customization: Created admin interfaces for content editors",
-                  "✅ Deployment: Set up CI/CD pipeline for Vercel hosting",
-                  "✅ Third-Party Integration: Added Swiper.js for interactive sliders"
-                ]
-              },
-              "preview_images": [
-                "image_1.png", 
-                "image_2.png"
-              ],
-              "contact": "tasmiroilislam@gmail.com",
-              "designer": "Tajmirul Islam",
-              "footer_stats": {
-                "stars": 83,
-                "likes": 20
-              }
-            }
-            
+  "experience": [
+    {
+      "company": "All Safe",
+      "position": "Frontend Developer",
+      "start_date": "APR 2025",
+      "end_date": "Present"
+    },
+    {
+      "company": "Code Craft",
+      "position": "Frontend Developer",
+      "start_date": "Nov 2024",
+      "end_date": "MAR 2025"
+    }
+  ],
+  "selected_projects": [
+    {
+      "id": "01",
+      "link": "https://totostore.vercel.app/",
+      "p_name": "Totostore",
+      "stack": ["Next.js", "Tailwind CSS", "Firebase"],
+      "details": [
+        {
+          "title": "Totostore – Fashion E-commerce Platform",
+          "link": "https://totostore.vercel.app/",
+          "githupLink": "https://github.com/ABDELRAHMAN097/totostore.git",
+          "year": 2024,
+          "tech_stack": ["Next.js", "Tailwind CSS", "React Icons", "Firebase"],
+          "description": "Totostore is a modern fashion e-commerce platform built to showcase and sell men's and women's clothing and accessories. It combines an elegant UI with seamless user experience and Firebase backend integration.",
+          "key_features": [
+            "🛒 Product Display: Stylish grid-based layout for men's and women's collections",
+            "🔍 Product Filtering: Users can browse by category (e.g., Women, Men)",
+            "🛍️ Wishlist Support: Save favorite items for later",
+            "📲 WhatsApp Checkout: Send orders directly via WhatsApp for manual handling",
+            "📱 Responsive Design: Fully optimized across all devices",
+            "⚡ Firebase Backend: Real-time data for products, wishlist, and cart"
+          ],
+          "technical_highlights": [
+            "🔥 Firebase Firestore & Storage: Used to manage product data and host images",
+            "🔐 Firebase Auth: Integrated for future login/signup support",
+            "🧠 State Management: Context API handles cart and wishlist globally",
+            "💬 WhatsApp Integration: Custom button generates dynamic messages to send order requests",
+            "⚛️ Dynamic Routing: Each product has a dedicated detail page using dynamic routes"
+          ],
+          "role": {
+            "position": "Full-Stack Developer",
+            "responsibilities": [
+              "🎨 UI/UX Design: Designed clean and user-friendly interfaces using Tailwind CSS",
+              "🛠️ Frontend: Built responsive components and interactive product displays",
+              "🧩 Backend: Managed product uploads, storage, and database structure via Firebase",
+              "🛒 Cart System: Implemented cart logic with add/remove functionality and localStorage persistence",
+              "📦 WhatsApp Orders: Created custom checkout message format and redirection logic",
+              "🚀 Deployment: Hosted on Vercel with production-ready optimization"
+            ]
+          },
+          "preview_images": [
+            "/image/projects/totostore.png",
+            "/image/projects/totostore-Home.png"
+          ],
+          "footer_stats": {
+            "stars": 83,
+            "likes": 20
+          }
+        }
       ]
-      },
-      {
-        "id": "02",
-        "link": "https://www.vitalityptlab.com/",
-        "p_name": "Vitality PTLAB",
-        "stack": ["next","tellwind"],
-        "details": [
-          {
-              "title": "Vitality PTLAB",
-              "link": "https://www.vitalityptlab.com/",
-              "year": 2024,
-              "tech_stack": [
-                "Next.js",
-                "Tailwind CSS",
-                "Swiper.js",
-                "Vercel"
-              ],
-              "description": "A complete agency portfolio platform built for MTI Electronics to showcase their services, blog content, and product offerings.",
-              "key_features": [
-                "⚙️ Service Display System: Interactive service showcase with synchronized sliders",
-                "📰 Blog Management: SEO-friendly blog with categorization and search",
-                "🛍️ Product Catalog: Organized product display with filtering capabilities",
-                "📱 Fully Responsive: Optimized for all device sizes",
-                "⚡ Fast Performance: Optimized Next.js frontend with ISR (Incremental Static Regeneration)"
-              ],
-              "technical_highlights": [
-                "Implemented complex slider synchronization logic using Swiper.js",
-                "Customized Payload CMS admin panel for intuitive content management",
-                "Developed reusable UI components with shadcn for design consistency",
-                "Configured efficient data fetching strategies in Next.js"
-              ],
-              "role": {
-                "position": "Full-Stack Developer",
-                "responsibilities": [
-                  "✅ Backend: Configured Payload CMS with custom collections for services, blogs, and products",
-                  "✅ Frontend: Built all UI components using Tailwind CSS and shadcn",
-                  "✅ State Management: Implemented client-side data fetching and caching",
-                  "✅ CMS Customization: Created admin interfaces for content editors",
-                  "✅ Deployment: Set up CI/CD pipeline for Vercel hosting",
-                  "✅ Third-Party Integration: Added Swiper.js for interactive sliders"
-                ]
-              },
-              "preview_images": [
-                "image_1.png", 
-                "image_2.png"
-              ],
-              "contact": "tasmiroilislam@gmail.com",
-              "designer": "Tajmirul Islam",
-              "footer_stats": {
-                "stars": 83,
-                "likes": 20
-              }
-            }
-            
+    },    
+    {
+      "id": "02",
+      "link": "https://www.vitalityptlab.com/",
+      "p_name": "Vitality PTLAB",
+      "stack": ["Next.js", "Tailwind CSS"],
+      "details": [
+        {
+          "title": "Vitality PTLAB",
+          "link": "https://www.vitalityptlab.com/",
+          "githupLink": "https://github.com/ABDELRAHMAN097/vitality.git",
+          "year": 2024,
+          "tech_stack": ["Next.js", "Tailwind CSS", "Swiper.js", "Vercel"],
+          "description": "An advanced portfolio website built for MTI Electronics to professionally present their services, blog content, and product offerings.",
+          "key_features": [
+            "⚙️ Service Display: Interactive and categorized service showcase using Swiper.js",
+            "📰 Blog Management: SEO-optimized blog with dynamic categorization and search capabilities",
+            "🛍️ Product Catalog: Organized and filterable product listings",
+            "📱 Fully Responsive: Seamlessly adapts to mobile, tablet, and desktop screens",
+            "⚡ High Performance: Blazing-fast page loads with Next.js ISR (Incremental Static Regeneration)"
+          ],
+          "technical_highlights": [
+            "✅ Implemented Swiper.js with advanced custom configurations for synchronized sliders",
+            "✅ Customized Payload CMS to manage blogs, services, and product content",
+            "✅ Created reusable UI components using Tailwind CSS and shadcn",
+            "✅ Optimized image loading, routing, and data fetching using Next.js best practices"
+          ],
+          "role": {
+            "position": "Full-Stack Developer",
+            "responsibilities": [
+              "🔧 Backend: Set up and customized Payload CMS collections and APIs",
+              "🎨 Frontend: Built dynamic and responsive UI using Tailwind and Swiper.js",
+              "🔄 Data Fetching: Applied Next.js ISR and CSR where appropriate",
+              "🛠️ CMS Integration: Enabled easy content editing through a user-friendly admin interface",
+              "🚀 Deployment: Configured CI/CD pipeline on Vercel for production deployment",
+              "🔗 External Libraries: Integrated third-party libraries for enhanced interactivity"
+            ]
+          },
+          "preview_images": ["/image/projects/vitalityptlab.png"],
+          "footer_stats": {
+            "stars": 83,
+            "likes": 20
+          }
+        }
       ]
-      },
-      {
-        "id": "03",
-        "link": "https://care-bridge-opal.vercel.app/",
-        "p_name": "Care Bridge Opal",
-        "stack": ["next","tellwind"],
-        "details": [
-          {
-              "title": "Care Bridge Opal",
-              "link": "https://care-bridge-opal.vercel.app/",
-              "year": 2024,
-              "tech_stack": [
-                "Next.js",
-                "Tailwind CSS",
-                "Swiper.js",
-                "Vercel"
-              ],
-              "description": "CareBridge is a web-based platform designed to streamline communication and coordination between caregivers, family members, and healthcare professionals involved in elderly care. The platform allows users to manage appointments, track medication schedules, and share real-time updates.",
-              "key_features": [
-                "⚙️ Service Display System: Interactive service showcase with synchronized sliders",
-                "📰 Blog Management: SEO-friendly blog with categorization and search",
-                "🛍️ Product Catalog: Organized product display with filtering capabilities",
-                "📱 Fully Responsive: Optimized for all device sizes",
-                "⚡ Fast Performance: Optimized Next.js frontend with ISR (Incremental Static Regeneration)"
-              ],
-              "technical_highlights": [
-                "Implemented complex slider synchronization logic using Swiper.js",
-                "Customized Payload CMS admin panel for intuitive content management",
-                "Developed reusable UI components with shadcn for design consistency",
-                "Configured efficient data fetching strategies in Next.js"
-              ],
-              "role": {
-                "position": "Full-Stack Developer",
-                "responsibilities": [
-                  "✅ Backend: Configured Payload CMS with custom collections for services, blogs, and products",
-                  "✅ Frontend: Built all UI components using Tailwind CSS and shadcn",
-                  "✅ State Management: Implemented client-side data fetching and caching",
-                  "✅ CMS Customization: Created admin interfaces for content editors",
-                  "✅ Deployment: Set up CI/CD pipeline for Vercel hosting",
-                  "✅ Third-Party Integration: Added Swiper.js for interactive sliders"
-                ]
-              },
-              "preview_images": [
-                "image_1.png", 
-                "image_2.png"
-              ],
-              "contact": "tasmiroilislam@gmail.com",
-              "designer": "Tajmirul Islam",
-              "footer_stats": {
-                "stars": 83,
-                "likes": 20
-              }
-            }
-            
+    },    
+    {
+      "id": "03",
+      "link": "https://care-bridge-opal.vercel.app/",
+      "p_name": "Care Bridge Opal",
+      "stack": ["Next.js", "Tailwind CSS", "Payload CMS", "Swiper.js", "Vercel"],
+      "details": [
+        {
+          "title": "Care Bridge Opal",
+          "link": "https://care-bridge-opal.vercel.app/",
+          "githupLink": "https://github.com/ABDELRAHMAN097/CareBridge",
+          "year": 2024,
+          "tech_stack": ["Next.js", "Tailwind CSS", "Swiper.js", "Payload CMS", "Vercel", "TypeScript"],
+          "description": "Care Bridge Opal is a comprehensive web platform designed to enhance communication, transparency, and coordination in elderly care. The platform connects caregivers, families, and healthcare professionals to manage services, track updates, and browse relevant content. Built using Next.js and Payload CMS, the project focuses on modular design, high performance, and responsive user experience.",
+          "key_features": [
+            "🧓 Elder Care Focused Platform: Designed specifically for elderly care coordination",
+            "🧾 Services Showcase: Fully dynamic service listing powered by Payload CMS",
+            "📰 Blog Section: SEO-optimized blog system with filtering and search features",
+            "🛍️ Product Catalog: Filterable and responsive product grid with real-time content updates",
+            "📸 Synchronized Sliders: Interactive dual-slider system for service previews using Swiper.js",
+            "🎨 Fully Responsive UI: Mobile-first design ensuring compatibility across all screen sizes",
+            "⚡ ISR (Incremental Static Regeneration): For fast content updates with minimal rebuild times"
+          ],
+          "technical_highlights": [
+            "Integrated Payload CMS as a headless backend with custom collections and fields",
+            "Developed reusable components with Tailwind CSS and Shadcn/UI for consistent design",
+            "Implemented Swiper.js slider syncing logic for dynamic, interactive carousels",
+            "Configured dynamic routing and ISR in Next.js for performant and flexible content pages",
+            "Optimized SEO using meta tags, structured data, and dynamic Open Graph tags",
+            "Deployed seamlessly to Vercel with CI/CD for rapid updates and preview deployments"
+          ],
+          "role": {
+            "position": "Frontend Developer",
+            "responsibilities": [
+              "🔧 Setup and configured Payload CMS collections for services, blogs, and products",
+              "🎨 Built responsive frontend components with Tailwind CSS and Shadcn/UI",
+              "🔗 Integrated Swiper.js for smooth carousel interactions and animations",
+              "⚙️ Implemented client-side data fetching using Next.js and optimized rendering strategies",
+              "🛠 Customized CMS dashboard for better content management experience",
+              "🚀 Handled project deployment and domain configuration via Vercel"
+            ]
+          },
+          "preview_images": ["/image/projects/care-bridge.png"],
+          "footer_stats": {
+            "stars": 83,
+            "likes": 20
+          }
+        }
       ]
-      },
-      {
-        "id": "04",
-        "link": "https://care-bridge-opal.vercel.app/",
-        "p_name": "Planify",
-        "stack": ["next","tellwind"],
-        "details": [
-          {
-              "title": "Planify – Trello-like Task Management App",
-              "link": "json-server",
-              "year": 2025,
-              "tech_stack": [
-                "Next.js",
-                "Tailwind CSS",
-                "Swiper.js",
-                "Vercel"
-              ],
-              "description": "CareBridge is a web-based platform designed to streamline communication and coordination between caregivers, family members, and healthcare professionals involved in elderly care. The platform allows users to manage appointments, track medication schedules, and share real-time updates.",
-              "key_features": [
-                "⚙️ Service Display System: Interactive service showcase with synchronized sliders",
-                "📰 Blog Management: SEO-friendly blog with categorization and search",
-                "🛍️ Product Catalog: Organized product display with filtering capabilities",
-                "📱 Fully Responsive: Optimized for all device sizes",
-                "⚡ Fast Performance: Optimized Next.js frontend with ISR (Incremental Static Regeneration)"
-              ],
-              "technical_highlights": [
-                "Implemented complex slider synchronization logic using Swiper.js",
-                "Customized Payload CMS admin panel for intuitive content management",
-                "Developed reusable UI components with shadcn for design consistency",
-                "Configured efficient data fetching strategies in Next.js"
-              ],
-              "role": {
-                "position": "Full-Stack Developer",
-                "responsibilities": [
-                  "✅ Backend: Configured Payload CMS with custom collections for services, blogs, and products",
-                  "✅ Frontend: Built all UI components using Tailwind CSS and shadcn",
-                  "✅ State Management: Implemented client-side data fetching and caching",
-                  "✅ CMS Customization: Created admin interfaces for content editors",
-                  "✅ Deployment: Set up CI/CD pipeline for Vercel hosting",
-                  "✅ Third-Party Integration: Added Swiper.js for interactive sliders"
-                ]
-              },
-              "preview_images": [
-                "/image/projects/dashboard.png", 
-                "/image/projects/dashboard.png"
-              ],
-              "contact": "tasmiroilislam@gmail.com",
-              "designer": "Tajmirul Islam",
-              "footer_stats": {
-                "stars": 83,
-                "likes": 20
-              }
-            }
-            
+    },    
+    {
+      "id": "04",
+      "link": "json-server",
+      "p_name": "Planify",
+      "stack": ["next", "tellwind"],
+      "details": [
+        {
+          "title": "Planify – Trello-like Task Management App",
+          "githupLink": "https://github.com/ABDELRAHMAN097/Planify",
+          "link": "json-server",
+          "year": 2025,
+          "tech_stack": ["Next.js", "Tailwind CSS", "Vercel"],
+          "description": "Planify is a Trello-inspired task management system that allows teams to efficiently manage their projects and tasks. With an intuitive UI and powerful functionality, users can add, edit, assign, and review tasks in a streamlined workflow. Team members are assigned to projects via drag-and-drop, and completed tasks can be submitted for admin review. The system supports full CRUD operations using JSON Server, making it ideal for testing and prototyping collaborative task boards",
+          "key_features": [
+            "⚙️ View all tasks in a structured layout",
+            "📰 Add new tasks with due dates and status",
+            "🛍️ Edit existing tasks anytime",
+            "📱 Delete tasks with confirmation",
+            "⚡ Filter tasks by status (To Do, In Progress, Done)",
+            "📦 Fully functional CRUD operations via JSON Server",
+            "🧲 Assign team members to projects using drag and drop",
+            "✅ Developers can submit tasks for review from the system",
+            "🔎 Admin can approve or reject submitted tasks",
+            "📋 Trello-like workflow for intuitive task management"
+          ],
+          "technical_highlights": [
+            "React.js depending",
+            "JSON Server as a mock backend",
+            "Tailwind CSS for fast and responsive UI styling",
+            "Framer Motion for animations if used"
+          ],
+          "role": {
+            "position": "Full-Stack Developer",
+            "responsibilities": [
+              "✅ I developed the entire application from scratch, focusing on building a responsive and clean UI. I handled API integration with JSON Server to simulate full CRUD functionality and ensured smooth user experience across all devices"
+            ]
+          },
+          "preview_images": [
+            "/image/projects/dashboard.png",
+            "/image/projects/home (2).png"
+          ],
+          "footer_stats": {
+            "stars": 83,
+            "likes": 20
+          }
+        }
       ]
-      }
-    ],
-    "footer" : [
-      {
-        "qu" : "are you need website?",
-        "gmaill" : "bodymagdy097@gmail.com",
-        "tel" : "0201023671214",
-        "pra" : "Design & built by Abdelrahman Magdy"
-      }
-    ]
-   
-  }
-  
+    }
+  ],
+  "footer": [
+    {
+      "qu": "are you need website?",
+      "gmaill": "bodymagdy097@gmail.com",
+      "tel": "0201023671214",
+      "pra": "Design & built by Abdelrahman Magdy"
+    }
+  ]
+}
