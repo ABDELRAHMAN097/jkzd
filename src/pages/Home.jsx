@@ -143,10 +143,10 @@ const Home = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 gap-4">
+    <>
       <div
         onMouseMove={handleMouseMove}
-        className="w-full relative text-white overflow-hidden"
+        className="w-full h-screen relative text-white overflow-hidden"
       >
         {/* Background Video */}
         <video
@@ -238,7 +238,7 @@ const Home = () => {
       </div>
 
       {/* About Section */}
-      <div className="min-h-screen w-full flex flex-col justify-center items-center space-y-6 relative py-8">
+      <div className="min-h-screen w-full flex flex-col justify-center items-center space-y-6 relative">
         {/* Background */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Beams
@@ -333,7 +333,7 @@ Beyond writing code, I enjoy collaborating with teams and designers to bring ide
       <Projects />
       {/* Footer */}
       <Footer />
-    </div>
+    </>
   );
 };
 
