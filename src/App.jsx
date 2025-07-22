@@ -16,19 +16,13 @@ function App() {
         />
       </Helmet>
 
-      <div className="relative bg-black z-0 overflow-hidden">
+      <div className="grid grid-cols-1 gap-4 relative bg-black z-0 overflow-hidden">
       <div className="fixed top-0 left-0 w-full z-50">
         <Navbar />
       </div>  
-        
        <AppRoutes />
-        
       </div>
     </HelmetProvider>
   )
 }
-
-export default App
-
-
-  
+export default App;

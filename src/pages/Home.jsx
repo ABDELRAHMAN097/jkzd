@@ -143,7 +143,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="">
+    <div className="grid grid-cols-1 gap-4">
       <div
         onMouseMove={handleMouseMove}
         className="w-full relative text-white overflow-hidden"
