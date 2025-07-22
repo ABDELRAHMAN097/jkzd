@@ -9,7 +9,7 @@ const Projects = () => {
   const [selectedIndex, setSelectedIndex] = useState(null);
 
   return (
-    <div className='max-w-[90%] min-h-screen mx-auto py-8'>
+    <div className='max-w-[90%] min-h-screen flex flex-col items-center justify-center py-8 mx-auto'>
       <Headers text="Projects" />
       <div className="w-full">
         {

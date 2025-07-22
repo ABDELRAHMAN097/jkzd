@@ -9,7 +9,7 @@ const Experience = () => {
       const [selectedIndex, setSelectedIndex] = useState(null);
     
   return (
-     <div className='max-w-[90%] mx-auto py-8'>
+     <div className='max-w-[90%] mx-auto flex flex-col items-center justify-center py-8 py-8'>
           <Headers text="Experience" />
           <div className="w-full">
             {

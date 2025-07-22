@@ -238,7 +238,7 @@ const Home = () => {
       </div>
 
       {/* About Section */}
-      <div className="min-h-screen w-full flex flex-col justify-center items-center space-y-6 relative">
+      <div className="min-h-screen w-full flex flex-col justify-center items-center space-y-6 relative py-8">
         {/* Background */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Beams
