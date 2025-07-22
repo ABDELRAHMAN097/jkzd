@@ -143,10 +143,10 @@ const Home = () => {
   ];
 
   return (
-    <>
+    <div className="">
       <div
         onMouseMove={handleMouseMove}
-        className="w-full h-screen relative text-white overflow-hidden"
+        className="w-full relative text-white overflow-hidden"
       >
         {/* Background Video */}
         <video
@@ -333,7 +333,7 @@ Beyond writing code, I enjoy collaborating with teams and designers to bring ide
       <Projects />
       {/* Footer */}
       <Footer />
-    </>
+    </div>
   );
 };
 
