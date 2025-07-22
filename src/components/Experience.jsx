@@ -9,7 +9,7 @@ const Experience = () => {
       const [selectedIndex, setSelectedIndex] = useState(null);
     
   return (
-     <div className='max-w-[90%] min-h-screen mx-auto flex flex-col items-center justify-center'>
+     <div className='w-[90%] mx-auto py-8'>
           <Headers text="Experience" />
           <div className="w-full">
             {
