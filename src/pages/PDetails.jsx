@@ -124,7 +124,7 @@ const PDetails = () => {
             rel="noopener noreferrer"
             className="inline-block mt-8 text-secondary underline"
           >
-            🌐 Visit Live Project
+            🌐 Visit Live Proj
           </Link>
               )
             }
