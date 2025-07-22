@@ -16,7 +16,7 @@ function App() {
         />
       </Helmet>
 
-      <div className="grid grid-cols-1 gap-4 relative bg-black min-h-[100dvh] z-0 overflow-hidden">
+      <div className="grid grid-cols-1 relative bg-black min-h-[100dvh] z-0 overflow-auto">
       <div className="fixed top-0 left-0 w-full z-50">
         <Navbar />
       </div>  

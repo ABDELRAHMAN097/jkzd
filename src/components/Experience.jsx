@@ -9,14 +9,14 @@ const Experience = () => {
       const [selectedIndex, setSelectedIndex] = useState(null);
     
   return (
-     <div className='max-w-[90%] mx-auto flex flex-col items-center justify-center py-8'>
+     <div className='max-w-[90%] mx-auto flex flex-col items-center justify-center'>
           <Headers text="Experience" />
           <div className="w-full">
             {
               experience.map((item, idx) => (
                 <div
                   onClick={() => setSelectedIndex(idx)}
-                  className={`group cursor-pointer ${idx !== experience.length - 1 ? 'border-b border-secondary' : ''} flex gap-4 items-start py-4 ${
+                  className={`group cursor-pointer ${idx !== experience.length - 1 ? 'border-b border-secondary' : ''} flex gap-4 items-start ${
                     selectedIndex === idx ? 'text-white' : 'text-[#adadad]'
                   }`}
                   key={idx}

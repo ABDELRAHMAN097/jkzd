@@ -8,7 +8,7 @@ const Footer = () => {
       {
         footer.map((item, i) => (
           <div
-          className='min-h-44 flex flex-col items-center justify-end gap-3 py-8 text-white'
+          className='min-h-44 flex flex-col items-center justify-end gap-3 text-white'
           key={i}
           >
 

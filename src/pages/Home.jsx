@@ -228,7 +228,7 @@ const Home = () => {
             <Link   
             
             target="_blank" href="https://drive.google.com/file/d/1M4NFtt8ou7qvoeo64fUTv-UeMMqwdjuX/view?usp=drive_link">
-              <button className="flex items-center gap-2 bg-white text-secondary px-6 py-2 rounded-full">
+              <button className="flex items-center gap-2 bg-white text-secondary px-6 rounded-full">
               <ImCloudDownload /> CV
               </button>
             </Link> 
@@ -238,7 +238,7 @@ const Home = () => {
       </div>
 
       {/* About Section */}
-      <div className="min-h-screen w-full flex flex-col justify-center items-center space-y-6 relative py-8">
+      <div className="min-h-screen w-full flex flex-col justify-center items-center gap-2 relative">
         {/* Background */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Beams

@@ -9,7 +9,7 @@ const Projects = () => {
   const [selectedIndex, setSelectedIndex] = useState(null);
 
   return (
-    <div className='max-w-[90%] mx-auto py-8'>
+    <div className='max-w-[90%] mx-auto'>
       <Headers text="Projects" />
       <div className="w-full">
         {
@@ -20,7 +20,7 @@ const Projects = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: false, amount: 0.1 }}
               onClick={() => setSelectedIndex(idx)}
-              className={`group cursor-pointer ${idx !== selected_projects.length - 1 ? 'border-b border-secondary' : ''} flex gap-4 items-start py-4 ${
+              className={`group cursor-pointer ${idx !== selected_projects.length - 1 ? 'border-b border-secondary' : ''} flex gap-4 items-start ${
                 selectedIndex === idx ? 'text-white' : 'text-[#adadad]'
               }`}
               key={idx}

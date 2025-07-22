@@ -17,7 +17,7 @@ const PDetails = () => {
   }, []);
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-10 text-white">
+    <div className="max-w-6xl mx-auto px-4 text-white">
       <Link to="/" className="text-secondary flex items-center gap-2 mb-6 relative z-50">
         <FaArrowLeftLong /> Back
       </Link>
