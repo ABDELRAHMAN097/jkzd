@@ -4,15 +4,13 @@ import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <div>
+    <div className='grid grid-cols-1 w-full'>
       {
         footer.map((item, i) => (
           <div
-          className='min-h-44 flex flex-col items-center justify-end gap-3 text-white'
+          className='min-h-84 max-h-screen flex flex-col items-center justify-end gap-3 text-white'
           key={i}
           >
-
-        
           <motion.p
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -20,11 +18,8 @@ const Footer = () => {
             viewport={{ once: false, amount: 0.1 }}
             className='flex flex-col items-center justify-center gap-3 text-white'
           >
-           
             {item.qu}
-           
           </motion.p>
-
           <motion.p
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
