@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  FaBars, FaTimes, FaBluetooth, FaPlay, FaLock,
-  FaMoon, FaCalculator, FaVolumeUp, FaEye
+  FaBars,
+  FaTimes,
+  FaPlay,
+  FaMoon,
+  FaCalculator,
+  FaVolumeUp,
+  FaEye,
 } from "react-icons/fa";
-import { AiOutlineWifi } from "react-icons/ai";
-import { MdScreenShare, MdFlashlightOn, MdAccessibilityNew } from "react-icons/md";
+import {
+  MdFlashlightOn,
+  MdAccessibilityNew,
+} from "react-icons/md";
 import { IoMdSunny } from "react-icons/io";
 import { BsFillEarFill } from "react-icons/bs";
 
@@ -78,35 +85,86 @@ const Navbar = () => {
 
               {/* Grid content */}
               <div className="grid grid-cols-4 gap-2">
-                <Tile><FaBluetooth /></Tile>
-                <Tile><AiOutlineWifi /></Tile>
+               
+                  <Tile>
+                  <a href="#about" className="w-full h-full flex justify-center items-center transition">
+            About
+          </a>
+                  </Tile>
+              
+                  <Tile>
+                <a href="#skills" className="w-full h-full flex justify-center items-center transition">
+                   Skills
+                </a>
+                  </Tile>
 
                 <div className="bg-[#2c2c2e] col-span-2 row-span-2 rounded-xl p-2 grid place-items-center text-center">
                   <p className="text-xs">Not Playing</p>
                   <div className="flex gap-2 mt-2 text-white text-sm">
                     <button>{"<<"}</button>
-                    <button><FaPlay size={18} /></button>
+                    <button>
+                      <FaPlay size={18} />
+                    </button>
                     <button>{">>"}</button>
                   </div>
                 </div>
+               
+                <Tile>
+                <a href="#tools" className="w-full h-full flex justify-center items-center transition">
+                Tools
+                </a>
+                </Tile>
+                <Tile>
+                <a href="#experience" className="w-full h-full flex justify-center items-center transition">
+                Experience
+                </a>
+                </Tile>
+                <Tile>
+                <a href="#projects" className="w-full h-full flex justify-center items-center transition">
+                Projects
+                </a>
+                </Tile>
 
-                <Tile><FaLock className="text-red-500" /></Tile>
-                <Tile><MdScreenShare /></Tile>
-                <Tile><FaMoon /></Tile>
-                <Tile><span className="text-xs">Focus</span></Tile>
+                
 
+                <Tile>
+                  <FaMoon />
+                </Tile>
                 <ControlSlider icon={<IoMdSunny />} />
                 <ControlSlider icon={<FaVolumeUp />} />
+                <Tile>
+                  <span className="text-xs">Focus</span>
+                </Tile>
 
-                <Tile><MdFlashlightOn /></Tile>
-                <Tile><FaCalculator /></Tile>
-                <Tile><BsFillEarFill /></Tile>
-                <Tile><MdAccessibilityNew /></Tile>
+                
+                
+                <Tile>
+                  <MdFlashlightOn />
+                </Tile>
+                
+                <Tile>
+                  <FaCalculator />
+                </Tile>
+                
+                <Tile>
+                  <BsFillEarFill />
+                </Tile>
+                <Tile>
+                  <MdAccessibilityNew />
+                </Tile>
 
-                <Tile><FaEye /></Tile>
-                <Tile><span className="text-xs">AA</span></Tile>
-                <Tile><span className="text-xs">🔒</span></Tile>
-                <Tile><span className="text-xs">🧭</span></Tile>
+                <Tile>
+                  <FaEye />
+                </Tile>
+                <Tile>
+                  <span className="text-xs">AA</span>
+                </Tile>
+                <Tile>
+                  <span className="text-xs">🔒</span>
+                </Tile>
+                <Tile>
+                  <span className="text-xs">🧭</span>
+                </Tile>
               </div>
             </motion.div>
           </>

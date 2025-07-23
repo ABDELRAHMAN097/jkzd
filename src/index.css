@@ -17,6 +17,9 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 @theme {
   --color-primary: oklch(var(--color-primary));

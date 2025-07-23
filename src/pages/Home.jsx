@@ -279,7 +279,7 @@ const Home = () => {
         </div>
 
         {/* About */}
-        <div className="grid grid-cols-1 max-w-[90%]">
+        <div id="about" className="grid grid-cols-1 max-w-[90%]">
           {/* header */}
           <div className="relative z-10 flex justify-start items-start w-full border-b border-secondary">
             <Headers text="About Me" />
@@ -354,8 +354,8 @@ const Home = () => {
             <div className="flex justify-center md:justify-start items-center col-span-1 ">
               <Headers text="Skills" />
             </div>
-            {/* Tools */}
-            <div className="flex justify-center items-center col-span-1">
+            {/* Skills */}
+            <div id="skills" className="flex justify-center items-center col-span-1">
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -367,7 +367,7 @@ const Home = () => {
             </div>
           </div>
           {/* tools */}
-          <div className="h-screen grid grid-cols-1 md:grid-cols-2">
+          <div id="tools" className="h-screen grid grid-cols-1 md:grid-cols-2">
             {/* header */}
             <div className="flex justify-center md:justify-start items-center col-span-1 ">
               <Headers text="Tools" />
@@ -388,9 +388,13 @@ const Home = () => {
       </div>
 
       {/* Experience */}
-      <Experience />
+      <div id="experience">
+      <Experience  />
+      </div>
       {/* Projects */}
+      <div id="projects">
       <Projects />
+      </div>
       {/* Footer */}
       <Footer />
     </div>
