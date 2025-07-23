@@ -290,21 +290,18 @@ Beyond writing code, I enjoy collaborating with teams and designers to bring ide
         <div className="-skew-x-44 -rotate-4 my-44">
           <ScrollVelocity
             texts={["Clean code, smooth design, outstanding results"]}
-            velocity={120}
             className="custom-scroll-text text-secondary skew-x-16"
           />
         </div>
         <div className="-skew-x-44 rotate-4">
           <ScrollVelocity
             texts={["I'm not just a developer — I craft experiences"]}
-            velocity={120}
             className="custom-scroll-text text-secondary skew-x-16"
           />
         </div>
         <div className="-skew-x-44 -rotate-4 my-44">
           <ScrollVelocity
-            texts={["<I turn your idea into a stunning user experience>"]}
-            velocity={120}
+            texts={["I turn your idea into a stunning user experience"]}
             className="custom-scroll-text text-secondary skew-x-16"
           />
         </div>
