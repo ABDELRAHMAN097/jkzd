@@ -10,7 +10,13 @@ import Headers from "../components/Headers";
 import GlassIcons from "../components/ReactBits/GlassIcons ";
 import Tools from "../components/ReactBits/Tools";
 import { IoLogoJavascript } from "react-icons/io";
-import { SiNextdotjs, SiSass, SiTypescript, SiVite } from "react-icons/si";
+import {
+  SiNextdotjs,
+  SiSass,
+  SiTypescript,
+  SiVite,
+  SiReactquery,
+} from "react-icons/si";
 import { FaDribbble, FaGitAlt, FaGithubAlt, FaReact } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { TbBrandRedux } from "react-icons/tb";
@@ -20,7 +26,7 @@ import Projects from "./Projects";
 import Experience from "../components/Experience";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
-
+import TiltedCard from "../components/ReactBits/TiltedCard ";
 
 const Home = () => {
   const videoRef = useRef(null);
@@ -125,7 +131,7 @@ const Home = () => {
     { icon: <SiNextdotjs />, color: "#303030", label: "Next.js" },
     { icon: <RiTailwindCssFill />, color: "#004574", label: "Tailwind" },
     { icon: <SiSass />, color: "#9449be", label: "Sass" },
-    { icon: <TbBrandRedux />, color: "purple", label: "Redux" }, 
+    { icon: <TbBrandRedux />, color: "purple", label: "Redux" },
     { icon: <FaShopify />, color: "#3da84b", label: "Shopify" },
   ];
 
@@ -133,13 +139,26 @@ const Home = () => {
   // update with your own icons and colors
   const toolsItems = [
     { icon: <FaGitAlt />, color: "red", label: "Git" },
-    { icon: <img src="/image/gsap.png" alt=" Logo" width={40} /> , color: "white", label: "GSAP" },
-    { icon: <img src="/image/favicon.svg" alt="Windsurf" width={40} /> , color: "white", label: "Windsurf" },
-    { icon: <img src="/image/Framer Motion.png" alt="Windsurf" width={40} /> , color: "white", label: "Framer Motion" },
+    {
+      icon: <img src="/image/gsap.png" alt=" Logo" width={40} />,
+      color: "white",
+      label: "GSAP",
+    },
+    {
+      icon: <img src="/image/favicon.svg" alt="Windsurf" width={40} />,
+      color: "white",
+      label: "Windsurf",
+    },
+    {
+      icon: <img src="/image/Framer Motion.png" alt="Windsurf" width={40} />,
+      color: "white",
+      label: "Framer Motion",
+    },
     { icon: <VscVscode />, color: "indigo", label: "Vscode" },
     { icon: <FaGithubAlt />, color: "#303030", label: "Github" },
     { icon: <FaDribbble />, color: "#9449be", label: "Dribbble" },
     { icon: <SiVite />, color: "#9449be", label: "Vite" },
+    { icon: <SiReactquery />, color: "#ff4154", label: "React Query" },
   ];
 
   useEffect(() => {
@@ -205,21 +224,22 @@ const Home = () => {
               />
             </div>
             {/* Abdelrahman Magdy */}
-            <motion.h1 
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            viewport={{ once: false, amount: 0.1 }}
-            className="text-3xl md:text-5xl text-secondary font-roboto font-bold mb-4" style={{ fontStretch: '125%' }}
+            <motion.h1
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              viewport={{ once: false, amount: 0.1 }}
+              className="text-3xl md:text-5xl text-secondary font-roboto font-bold mb-4"
+              style={{ fontStretch: "125%" }}
             >
               Abdelrahman Magdy
             </motion.h1>
 
             <motion.p
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: false, amount: 0.1 }}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: false, amount: 0.1 }}
               style={{ fontFamily: "var(--font-family-text)" }}
               className="text-lg md:text-xl mb-6 max-w-2xl"
             >
@@ -229,13 +249,14 @@ const Home = () => {
               Smooth Fast Responsive Just like your users expect
             </motion.p>
             {/* button cv */}
-            <Link   
-            
-            target="_blank" href="https://drive.google.com/file/d/1M4NFtt8ou7qvoeo64fUTv-UeMMqwdjuX/view?usp=drive_link">
+            <Link
+              target="_blank"
+              href="https://drive.google.com/file/d/1M4NFtt8ou7qvoeo64fUTv-UeMMqwdjuX/view?usp=drive_link"
+            >
               <button className="flex items-center gap-2 bg-white text-secondary px-6 py-2 rounded-full">
-              <ImCloudDownload /> CV
+                <ImCloudDownload /> CV
               </button>
-            </Link> 
+            </Link>
           </div>
           {/* 4taps */}
         </div>
@@ -256,26 +277,47 @@ const Home = () => {
             rotation={17}
           />
         </div>
-        <div className="max-w-[90%]">
+
+        <div className="grid grid-cols-1 max-w-[90%]">
           {/* header */}
           <div className="relative z-10 flex justify-start items-start w-full border-b border-secondary">
             <Headers text="About Me" />
           </div>
 
-          {/* Paragraph */}
-          <div className="relative z-10 flex justify-center items-center w-full">
-            <div className="w-full text-center md:text-start text-white p-4">
-              <DecryptedText
-                className="text-xl md:text-2xl justify-start leading-relaxed"
-                text="I'm a creative and detail-oriented Frontend Developer with a strong passion for crafting exceptional user experiences. I specialize in building high-performance, visually appealing, and fully responsive websites using modern technologies like React, Next.js, and Tailwind CSS.
-I have a sharp eye for design and a deep understanding of UI/UX principles, which allows me to transform ideas into smooth, engaging digital experiences. I love turning complex problems into simple, elegant solutions — and I'm always eager to learn and stay up-to-date with the latest trends in frontend development.
-Beyond writing code, I enjoy collaborating with teams and designers to bring ideas to life and deliver real value to users"
-                speed={100}
-                maxIterations={20}
-                characters="ABCD1234!?"
-                animateOn="view"
-                parentClassName="all-letters"
-                encryptedClassName="encrypted"
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            {/* Paragraph */}
+            <div className="relative z-10 flex justify-center items-center w-full">
+              <div className="w-full text-center md:text-start text-white p-4">
+                <DecryptedText
+                  className="text-xl md:text-2xl justify-start leading-relaxed"
+                  text="I'm a creative and detail-oriented Frontend Developer with a strong passion for crafting exceptional user experiences. I specialize in building high-performance, visually appealing, and fully responsive websites using modern technologies like React, Next.js, and Tailwind CSS. I have a sharp eye for design and a deep understanding of UI/UX principles"
+                  speed={100}
+                  maxIterations={20}
+                  characters="ABCD1234!?"
+                  animateOn="view"
+                  parentClassName="all-letters"
+                  encryptedClassName="encrypted"
+                />
+              </div>
+            </div>
+            {/* Tilted Card */}
+            <div className="p-5">
+              <TiltedCard
+                imageSrc="/image/me.png"
+                altText="Abdelrahman - Dev"
+                captionText="Abdelrahman - Dev"
+                containerHeight="300px"
+                containerWidth="300px"
+                imageHeight="300px"
+                imageWidth="300px"
+                rotateAmplitude={12}
+                scaleOnHover={1.01}
+                showMobileWarning={false}
+                showTooltip={true}
+                displayOverlayContent={true}
+                overlayContent={
+                  <p className="tilted-card-demo-text text-secondary bg-gray-300/20 p-1 rounded">Abdelrahman - Dev</p>
+                }
               />
             </div>
           </div>
@@ -286,25 +328,24 @@ Beyond writing code, I enjoy collaborating with teams and designers to bring ide
 
       <div className="mb-8">
         <div className="grid grid-cols-1 gap-5">
-
-        <div className="-rotate-4 my-44">
-          <ScrollVelocity
-            texts={["Clean code, smooth design, outstanding results"]}
-            className="custom-scroll-text text-secondary"
-          />
-        </div>
-        <div className=" rotate-4">
-          <ScrollVelocity
-            texts={["I'm not just a developer — I craft experiences"]}
-            className="custom-scroll-text text-secondary "
-          />
-        </div>
-        <div className=" -rotate-4 my-44">
-          <ScrollVelocity
-            texts={["I turn your idea into a stunning user experience"]}
-            className="custom-scroll-text text-secondary "
-          />
-        </div>
+          <div className="-rotate-4 my-44">
+            <ScrollVelocity
+              texts={["Clean code, smooth design, outstanding results"]}
+              className="custom-scroll-text text-secondary"
+            />
+          </div>
+          <div className="  rotate-4">
+            <ScrollVelocity
+              texts={["I'm not just a developer — I craft experiences"]}
+              className="custom-scroll-text text-secondary "
+            />
+          </div>
+          <div className=" -rotate-4 my-44">
+            <ScrollVelocity
+              texts={["I turn your idea into a stunning user experience"]}
+              className="custom-scroll-text text-secondary "
+            />
+          </div>
         </div>
         <div className="max-w-[90%] mx-auto">
           <div className="h-screen grid grid-cols-1 md:grid-cols-2">
