@@ -33,8 +33,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className={`w-full top-0 left-0 z-50 p-4 flex justify-end items-center bg-transparent ${
-        isOpen ? "fixed bg-[#2c2c2c]" : "static"
+    <div className={`w-full top-0 right-0 z-50 p-4 flex justify-end items-center bg-transparent ${
+        isOpen ? "fixed bg-[#2c2c2c] w-[40%]" : " w-[40%] static"
     }`} >
       {/* Logo */}
       {/* <Link to="/" className=" font-bold text-xl z-50">
@@ -66,18 +66,7 @@ const Navbar = () => {
               exit="exit"
               className="flex flex-col items-center gap-6 z-40"
             >
-              <Link to="/" onClick={() => setIsOpen(false)}>
-                Home
-              </Link>
-              <Link to="/about" onClick={() => setIsOpen(false)}>
-                About
-              </Link>
-              {/* <Link to="/services" onClick={() => setIsOpen(false)}>
-                Services
-              </Link>
-              <Link to="/contact" onClick={() => setIsOpen(false)}>
-                Contact
-              </Link> */}
+              
             </motion.div>
           </motion.div>
         )}

@@ -264,9 +264,9 @@ const Home = () => {
 
           {/* Paragraph */}
           <div className="relative z-10 flex justify-center items-center w-full">
-            <div className="w-full text-center md:text-start text-white p-4 rounded">
+            <div className="w-full text-center md:text-start text-white p-4">
               <DecryptedText
-                className="text-xl md:text-2xl justify-center leading-relaxed"
+                className="text-xl md:text-2xl justify-start leading-relaxed"
                 text="I'm a creative and detail-oriented Frontend Developer with a strong passion for crafting exceptional user experiences. I specialize in building high-performance, visually appealing, and fully responsive websites using modern technologies like React, Next.js, and Tailwind CSS.
 I have a sharp eye for design and a deep understanding of UI/UX principles, which allows me to transform ideas into smooth, engaging digital experiences. I love turning complex problems into simple, elegant solutions — and I'm always eager to learn and stay up-to-date with the latest trends in frontend development.
 Beyond writing code, I enjoy collaborating with teams and designers to bring ideas to life and deliver real value to users"
@@ -285,12 +285,29 @@ Beyond writing code, I enjoy collaborating with teams and designers to bring ide
       {/* skils & Tools section */}
 
       <div className="mb-8">
-        <div className="-skew-x-44">
+        <div className="grid grid-cols-1 gap-5">
+
+        <div className="-skew-x-44 -rotate-4 my-44">
           <ScrollVelocity
-            texts={["Boody Magdy", "Skills & Tools"]}
-            velocity={150}
+            texts={["Clean code, smooth design, outstanding results"]}
+            velocity={120}
             className="custom-scroll-text text-secondary skew-x-16"
           />
+        </div>
+        <div className="-skew-x-44 rotate-4">
+          <ScrollVelocity
+            texts={["I'm not just a developer — I craft experiences"]}
+            velocity={120}
+            className="custom-scroll-text text-secondary skew-x-16"
+          />
+        </div>
+        <div className="-skew-x-44 -rotate-4 my-44">
+          <ScrollVelocity
+            texts={["<I turn your idea into a stunning user experience>"]}
+            velocity={120}
+            className="custom-scroll-text text-secondary skew-x-16"
+          />
+        </div>
         </div>
         <div className="max-w-[90%] mx-auto">
           <div className="h-screen grid grid-cols-1 md:grid-cols-2">
