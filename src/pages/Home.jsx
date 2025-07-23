@@ -278,6 +278,7 @@ const Home = () => {
           />
         </div>
 
+        {/* About */}
         <div className="grid grid-cols-1 max-w-[90%]">
           {/* header */}
           <div className="relative z-10 flex justify-start items-start w-full border-b border-secondary">
