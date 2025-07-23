@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaBars, FaTimes, FaBluetooth, FaPlay, FaLock, FaMoon, FaCalculator, FaVolumeUp, FaEye } from "react-icons/fa";
+import {
+  FaBars, FaTimes, FaBluetooth, FaPlay, FaLock,
+  FaMoon, FaCalculator, FaVolumeUp, FaEye
+} from "react-icons/fa";
 import { AiOutlineWifi } from "react-icons/ai";
 import { MdScreenShare, MdFlashlightOn, MdAccessibilityNew } from "react-icons/md";
 import { IoMdSunny } from "react-icons/io";
@@ -8,6 +11,16 @@ import { BsFillEarFill } from "react-icons/bs";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  // Handle scroll lock
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+    return () => document.body.classList.remove("overflow-hidden");
+  }, [isOpen]);
 
   const sidebarVariants = {
     hidden: { x: "100%", opacity: 0 },
@@ -36,6 +49,7 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <>
+            {/* Click outside to close */}
             <motion.div
               className="fixed inset-0 bg-black/50 z-40"
               onClick={() => setIsOpen(false)}
@@ -45,13 +59,15 @@ const Navbar = () => {
             />
 
             <motion.div
-              className="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-[#1e1e1e] text-white shadow-lg z-50 p-4 overflow-y-auto"
+              className="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-[#1e1e1e] text-white shadow-lg z-50 p-4 overflow-y-auto grid grid-rows-[auto_1fr] gap-4"
               variants={sidebarVariants}
               initial="hidden"
               animate="visible"
               exit="exit"
+              onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside
             >
-              <div className="flex justify-end mb-4">
+              {/* Close Button */}
+              <div className="flex justify-end">
                 <button
                   onClick={() => setIsOpen(false)}
                   className="text-white text-2xl"
@@ -60,11 +76,12 @@ const Navbar = () => {
                 </button>
               </div>
 
+              {/* Grid content */}
               <div className="grid grid-cols-4 gap-2">
                 <Tile><FaBluetooth /></Tile>
                 <Tile><AiOutlineWifi /></Tile>
 
-                <div className="bg-[#2c2c2e] col-span-2 row-span-2 rounded-xl p-2 flex flex-col items-center justify-center">
+                <div className="bg-[#2c2c2e] col-span-2 row-span-2 rounded-xl p-2 grid place-items-center text-center">
                   <p className="text-xs">Not Playing</p>
                   <div className="flex gap-2 mt-2 text-white text-sm">
                     <button>{"<<"}</button>
