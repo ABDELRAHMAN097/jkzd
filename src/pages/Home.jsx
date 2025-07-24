@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import {useTranslation} from "react-i18next";
 import { ImCloudDownload } from "react-icons/im";
 import BlurText from "../components/ReactBits/BlurText";
 import TextPressure from "../components/ReactBits/TextPressure";
@@ -29,6 +30,8 @@ import { motion } from "framer-motion";
 import TiltedCard from "../components/ReactBits/TiltedCard ";
 
 const Home = () => {
+
+  const { t, i18n } = useTranslation('global');
   const videoRef = useRef(null);
   const timeoutRef = useRef(null);
 
@@ -124,41 +127,41 @@ const Home = () => {
     {
       icon: <IoLogoJavascript />,
       color: "hsl(53.36deg 93.13% 54.31%)",
-      label: "Javascript",
+      label: t("text.Javascript"),
     },
-    { icon: <SiTypescript />, color: "blue", label: "Typescript" },
-    { icon: <FaReact />, color: "indigo", label: "React.js" },
-    { icon: <SiNextdotjs />, color: "#303030", label: "Next.js" },
-    { icon: <RiTailwindCssFill />, color: "#004574", label: "Tailwind" },
-    { icon: <SiSass />, color: "#9449be", label: "Sass" },
-    { icon: <TbBrandRedux />, color: "purple", label: "Redux" },
-    { icon: <FaShopify />, color: "#3da84b", label: "Shopify" },
+    { icon: <SiTypescript />, color: "blue", label: t("text.Typescript") },
+    { icon: <FaReact />, color: "indigo", label: t("text.React") },
+    { icon: <SiNextdotjs />, color: "#303030", label: t("text.Next") },
+    { icon: <RiTailwindCssFill />, color: "#004574", label: t("text.Tailwind") },
+    { icon: <SiSass />, color: "#9449be", label: t("text.Sass") },
+    { icon: <TbBrandRedux />, color: "purple", label: t("text.Redux") },
+    { icon: <FaShopify />, color: "#3da84b", label: t("text.Shopify") },
   ];
 
   // Tools
   // update with your own icons and colors
   const toolsItems = [
-    { icon: <FaGitAlt />, color: "red", label: "Git" },
+    { icon: <FaGitAlt />, color: "red", label: t("text.Git") },
     {
-      icon: <img src="/image/gsap.png" alt=" Logo" width={40} />,
+      icon: <img src="/image/gsap.png" alt=" GSAP" width={40} />,
       color: "white",
-      label: "GSAP",
+      label: t("text.GSAP")
     },
     {
       icon: <img src="/image/favicon.svg" alt="Windsurf" width={40} />,
       color: "white",
-      label: "Windsurf",
+      label: t("text.Windsurf"),
     },
     {
-      icon: <img src="/image/Framer Motion.png" alt="Windsurf" width={40} />,
+      icon: <img src="/image/Framer Motion.png" alt="Framer Motion" width={40} />,
       color: "white",
-      label: "Framer Motion",
+      label: t("text.Framer Motion"),
     },
-    { icon: <VscVscode />, color: "indigo", label: "Vscode" },
-    { icon: <FaGithubAlt />, color: "#303030", label: "Github" },
-    { icon: <FaDribbble />, color: "#9449be", label: "Dribbble" },
-    { icon: <SiVite />, color: "#9449be", label: "Vite" },
-    { icon: <SiReactquery />, color: "#ff4154", label: "React Query" },
+    { icon: <VscVscode />, color: "indigo", label: t("text.Vscode") },
+    { icon: <FaGithubAlt />, color: "#303030", label: t("text.Github") },
+    { icon: <FaDribbble />, color: "#9449be", label: t("text.Dribbble") },
+    { icon: <SiVite />, color: "#9449be", label: t("text.Vite") },
+    { icon: <SiReactquery />, color: "#ff4154", label: t("text.React Query") },
   ];
 
   useEffect(() => {
@@ -197,7 +200,6 @@ const Home = () => {
                   className="w-4 h-4 bg-black rounded-full absolute transition-all duration-100"
                 ></div>
               </div>
-
               {/* Right Eye */}
               <div
                 ref={rightEyeRef}
@@ -211,7 +213,7 @@ const Home = () => {
             </div>
             <div style={{ position: "relative" }}>
               <TextPressure
-                text="Hello! I Am"
+                text="Hello I'm"
                 flex={true}
                 alpha={false}
                 stroke={false}
@@ -232,7 +234,7 @@ const Home = () => {
               className="text-3xl md:text-5xl text-secondary font-roboto font-bold mb-4"
               style={{ fontStretch: "125%" }}
             >
-              Abdelrahman Magdy
+              {t("heroSection.name")}
             </motion.h1>
 
             <motion.p
@@ -243,10 +245,9 @@ const Home = () => {
               style={{ fontFamily: "var(--font-family-text)" }}
               className="text-lg md:text-xl mb-6 max-w-2xl"
             >
-              I'm a frontend developer turning designs into living, breathing
-              interfaces
+             {t("heroSection.pragraph")}
               <br />
-              Smooth Fast Responsive Just like your users expect
+              {t("heroSection.pragraph2")}
             </motion.p>
             {/* button cv */}
             <Link
@@ -282,7 +283,7 @@ const Home = () => {
         <div id="about" className="grid grid-cols-1 max-w-[90%]">
           {/* header */}
           <div className="relative z-10 flex justify-start items-start w-full border-b border-secondary">
-            <Headers text="About Me" />
+            <Headers text={t("section.about")} />
           </div>
 
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -291,7 +292,7 @@ const Home = () => {
               <div className="w-full text-center md:text-start text-white p-4">
                 <DecryptedText
                   className="text-xl md:text-2xl justify-start leading-relaxed"
-                  text="I'm a creative and detail-oriented Frontend Developer with a strong passion for crafting exceptional user experiences. I specialize in building high-performance, visually appealing, and fully responsive websites using modern technologies like React, Next.js, and Tailwind CSS. I have a sharp eye for design and a deep understanding of UI/UX principles"
+                  text={t("text.about-pragraph")}
                   speed={100}
                   maxIterations={20}
                   characters="ABCD1234!?"
@@ -352,7 +353,7 @@ const Home = () => {
           <div className="h-screen grid grid-cols-1 md:grid-cols-2">
             {/* header */}
             <div className="flex justify-center md:justify-start items-center col-span-1 ">
-              <Headers text="Skills" />
+              <Headers text={t("section.skills")} />
             </div>
             {/* Skills */}
             <div id="skills" className="flex justify-center items-center col-span-1">
@@ -370,7 +371,7 @@ const Home = () => {
           <div id="tools" className="h-screen grid grid-cols-1 md:grid-cols-2">
             {/* header */}
             <div className="flex justify-center md:justify-start items-center col-span-1 ">
-              <Headers text="Tools" />
+              <Headers text={t("section.tools")} />
             </div>
             {/* icons */}
             <div className="flex justify-center items-center col-span-1">

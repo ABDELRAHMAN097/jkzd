@@ -68,7 +68,7 @@
       "id": "02",
       "link": "https://www.vitalityptlab.com/",
       "p_name": "Vitality PTLAB",
-      "stack": ["Next.js", "Tailwind CSS"],
+      "stack": ["React.js", "Tailwind CSS"],
       "details": [
         {
           "title": "Vitality PTLAB",
@@ -162,7 +162,7 @@
       "id": "04",
       "link": "json-server",
       "p_name": "Planify",
-      "stack": ["next", "tellwind"],
+      "stack": ["React.js", "tellwind"],
       "details": [
         {
           "title": "Planify – Trello-like Task Management App",

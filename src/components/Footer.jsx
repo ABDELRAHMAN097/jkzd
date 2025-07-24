@@ -1,8 +1,10 @@
 import React from 'react'
 import { footer } from "../db/db.json"
 import { motion } from "framer-motion";
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation('global');
   return (
     <div className='grid grid-cols-1 w-full p-5'>
       {
@@ -20,7 +22,7 @@ const Footer = () => {
             viewport={{ once: false, amount: 0.1 }}
             className='text-white'
           >
-            {item.qu}
+            {t("foot.areYou")}
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 40 }}
@@ -55,7 +57,7 @@ const Footer = () => {
             className='text-white'
           >
            
-            {item.pra}
+            {t("foot.pragraph")}
            
           </motion.p>
 

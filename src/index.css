@@ -28,12 +28,12 @@ html {
   --font-family-Anton: "Anton", sans-serif;
 }
 
-/* html[dir="rtl"]{
+html[dir="rtl"]{
   font-family: "Rubik", sans-serif !important;
 }
 html[dir="ltr"]{
-  font-family: "Roboto Serif","sans-serif" !important;
-} */
+  font-family: "Anton","sans-serif" !important;
+}
 
 ::-webkit-scrollbar {
   @apply w-[8px] h-3;

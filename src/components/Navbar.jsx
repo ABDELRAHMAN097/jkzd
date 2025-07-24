@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { SiGoogletranslate } from "react-icons/si";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   FaBars,
@@ -9,15 +11,13 @@ import {
   FaVolumeUp,
   FaEye,
 } from "react-icons/fa";
-import {
-  MdFlashlightOn,
-  MdAccessibilityNew,
-} from "react-icons/md";
+import { MdFlashlightOn, MdAccessibilityNew } from "react-icons/md";
 import { IoMdSunny } from "react-icons/io";
 import { BsFillEarFill } from "react-icons/bs";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { i18n } = useTranslation();
 
   // Handle scroll lock
   useEffect(() => {
@@ -85,18 +85,23 @@ const Navbar = () => {
 
               {/* Grid content */}
               <div className="grid grid-cols-4 gap-2">
-               
-                  <Tile>
-                  <a href="#about" className="w-full h-full flex justify-center items-center transition">
-            About
-          </a>
-                  </Tile>
-              
-                  <Tile>
-                <a href="#skills" className="w-full h-full flex justify-center items-center transition">
-                   Skills
-                </a>
-                  </Tile>
+                <Tile>
+                  <a
+                    href="#about"
+                    className="w-full h-full flex justify-center items-center transition"
+                  >
+                    About
+                  </a>
+                </Tile>
+
+                <Tile>
+                  <a
+                    href="#skills"
+                    className="w-full h-full flex justify-center items-center transition"
+                  >
+                    Skills
+                  </a>
+                </Tile>
 
                 <div className="bg-[#2c2c2e] col-span-2 row-span-2 rounded-xl p-2 grid place-items-center text-center">
                   <p className="text-xs">Not Playing</p>
@@ -108,44 +113,59 @@ const Navbar = () => {
                     <button>{">>"}</button>
                   </div>
                 </div>
-               
-                <Tile>
-                <a href="#tools" className="w-full h-full flex justify-center items-center transition">
-                Tools
-                </a>
-                </Tile>
-                <Tile>
-                <a href="#experience" className="w-full h-full flex justify-center items-center transition">
-                Experience
-                </a>
-                </Tile>
-                <Tile>
-                <a href="#projects" className="w-full h-full flex justify-center items-center transition">
-                Projects
-                </a>
-                </Tile>
 
-                
+                <Tile>
+                  <a
+                    href="#tools"
+                    className="w-full h-full flex justify-center items-center transition"
+                  >
+                    Tools
+                  </a>
+                </Tile>
+                <Tile>
+                  <a
+                    href="#experience"
+                    className="w-full h-full flex justify-center items-center transition"
+                  >
+                    Experience
+                  </a>
+                </Tile>
+                <Tile>
+                  <a
+                    href="#projects"
+                    className="w-full h-full flex justify-center items-center transition"
+                  >
+                    Projects
+                  </a>
+                </Tile>
 
                 <Tile>
                   <FaMoon />
                 </Tile>
                 <ControlSlider icon={<IoMdSunny />} />
                 <ControlSlider icon={<FaVolumeUp />} />
-                <Tile>
-                  <span className="text-xs">Focus</span>
+
+                <Tile className="cursor-pointer">
+                  <button
+                    onClick={() => {
+                      const newLang = i18n.language === "en" ? "ar" : "en";
+                      i18n.changeLanguage(newLang);
+                      localStorage.setItem('i18nextLng', newLang);
+                    }}
+                    className="w-full h-full flex justify-center items-center transition"
+                  >
+                    <SiGoogletranslate className="text-xl"/>
+                  </button>
                 </Tile>
 
-                
-                
                 <Tile>
                   <MdFlashlightOn />
                 </Tile>
-                
+
                 <Tile>
                   <FaCalculator />
                 </Tile>
-                
+
                 <Tile>
                   <BsFillEarFill />
                 </Tile>

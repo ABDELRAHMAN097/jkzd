@@ -4,13 +4,15 @@ import { selected_projects } from '../db/db';
 import { HiLink } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const Projects = () => {
   const [selectedIndex, setSelectedIndex] = useState(null);
+  const { t } = useTranslation('global');
 
   return (
     <div className='w-[90%] min-h-screen mx-auto'>
-      <Headers text="Projects" />
+      <Headers text={t("section.projects")} />
       <div className="w-full">
         {
           selected_projects.map((project, idx) => (
