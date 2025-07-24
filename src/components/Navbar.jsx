@@ -14,6 +14,7 @@ import {
 import { MdFlashlightOn, MdAccessibilityNew } from "react-icons/md";
 import { IoMdSunny } from "react-icons/io";
 import { BsFillEarFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -150,11 +151,11 @@ const Navbar = () => {
                     onClick={() => {
                       const newLang = i18n.language === "en" ? "ar" : "en";
                       i18n.changeLanguage(newLang);
-                      localStorage.setItem('i18nextLng', newLang);
+                      localStorage.setItem("i18nextLng", newLang);
                     }}
                     className="w-full h-full flex justify-center items-center transition"
                   >
-                    <SiGoogletranslate className="text-xl"/>
+                    <SiGoogletranslate className="text-xl" />
                   </button>
                 </Tile>
 
@@ -177,13 +178,32 @@ const Navbar = () => {
                   <FaEye />
                 </Tile>
                 <Tile>
-                  <span className="text-xs">AA</span>
+                  <a
+                    href="https://wa.me/20123671214?text=مرحبا،%20أرغب%20في%20الاستفسار%20عن%20خدماتكم"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full h-full flex justify-center items-center transition"
+                  >
+                    WhatsApp
+                  </a>
                 </Tile>
                 <Tile>
-                  <span className="text-xs">🔒</span>
+                  <Link
+                    to="https://github.com/ABDELRAHMAN097"
+                    target="_blank"
+                    className="w-full h-full flex justify-center items-center transition"
+                  >
+                    GitHub
+                  </Link>
                 </Tile>
                 <Tile>
-                  <span className="text-xs">🧭</span>
+                  <Link
+                    to="https://www.linkedin.com/in/abdelrahman-magdy-4944a3242/"
+                    target="_blank"
+                    className="w-full h-full flex justify-center items-center transition"
+                  >
+                    LinkedIn
+                  </Link>
                 </Tile>
               </div>
             </motion.div>
