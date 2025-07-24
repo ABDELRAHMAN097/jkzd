@@ -179,7 +179,7 @@ const Navbar = () => {
                 </Tile>
                 <Tile>
                   <a
-                    href="https://wa.me/20123671214?text=مرحبا،%20أرغب%20في%20الاستفسار%20عن%20خدماتكم"
+                    href="https://wa.me/201023671214?text=مرحبا،%20أرغب%20في%20الاستفسار%20عن%20خدماتكم"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full h-full flex justify-center items-center transition"
