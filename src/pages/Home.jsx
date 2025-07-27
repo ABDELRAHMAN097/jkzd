@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 import { ImCloudDownload } from "react-icons/im";
 import BlurText from "../components/ReactBits/BlurText";
 import TextPressure from "../components/ReactBits/TextPressure";
@@ -28,10 +28,10 @@ import Experience from "../components/Experience";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 import TiltedCard from "../components/ReactBits/TiltedCard ";
+import ScrollStack, { ScrollStackItem } from "../components/ReactBits/ScrollStack";
 
 const Home = () => {
-
-  const { t, i18n } = useTranslation('global');
+  const { t, i18n } = useTranslation("global");
   const videoRef = useRef(null);
   const timeoutRef = useRef(null);
 
@@ -132,7 +132,11 @@ const Home = () => {
     { icon: <SiTypescript />, color: "blue", label: t("text.Typescript") },
     { icon: <FaReact />, color: "indigo", label: t("text.React") },
     { icon: <SiNextdotjs />, color: "#303030", label: t("text.Next") },
-    { icon: <RiTailwindCssFill />, color: "#004574", label: t("text.Tailwind") },
+    {
+      icon: <RiTailwindCssFill />,
+      color: "#004574",
+      label: t("text.Tailwind"),
+    },
     { icon: <SiSass />, color: "#9449be", label: t("text.Sass") },
     { icon: <TbBrandRedux />, color: "purple", label: t("text.Redux") },
     { icon: <FaShopify />, color: "#3da84b", label: t("text.Shopify") },
@@ -145,7 +149,7 @@ const Home = () => {
     {
       icon: <img src="/image/gsap.png" alt=" GSAP" width={40} />,
       color: "white",
-      label: t("text.GSAP")
+      label: t("text.GSAP"),
     },
     {
       icon: <img src="/image/favicon.svg" alt="Windsurf" width={40} />,
@@ -153,7 +157,9 @@ const Home = () => {
       label: t("text.Windsurf"),
     },
     {
-      icon: <img src="/image/Framer Motion.png" alt="Framer Motion" width={40} />,
+      icon: (
+        <img src="/image/Framer Motion.png" alt="Framer Motion" width={40} />
+      ),
       color: "white",
       label: t("text.Framer Motion"),
     },
@@ -245,7 +251,7 @@ const Home = () => {
               style={{ fontFamily: "var(--font-family-text)" }}
               className="text-lg md:text-xl mb-6 max-w-2xl"
             >
-             {t("heroSection.pragraph")}
+              {t("heroSection.pragraph")}
               <br />
               {t("heroSection.pragraph2")}
             </motion.p>
@@ -318,7 +324,9 @@ const Home = () => {
                 showTooltip={true}
                 displayOverlayContent={true}
                 overlayContent={
-                  <p className="tilted-card-demo-text text-secondary bg-gray-300/20 p-1 rounded">Abdelrahman - Dev</p>
+                  <p className="tilted-card-demo-text text-secondary bg-gray-300/20 p-1 rounded">
+                    Abdelrahman - Dev
+                  </p>
                 }
               />
             </div>
@@ -356,7 +364,10 @@ const Home = () => {
               <Headers text={t("section.skills")} />
             </div>
             {/* Skills */}
-            <div id="skills" className="flex justify-center items-center col-span-1">
+            <div
+              id="skills"
+              className="flex justify-center items-center col-span-1"
+            >
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -390,11 +401,52 @@ const Home = () => {
 
       {/* Experience */}
       <div id="experience">
-      <Experience  />
+        <Experience />
       </div>
       {/* Projects */}
       <div id="projects">
-      <Projects />
+        <Projects />
+      </div>
+      {/*  */}
+      <div className="max-h-screen">
+        <ScrollStack>
+          <ScrollStackItem>
+            <div className="bg-fuchsia-500 ">
+            <h2 className="text-white">Card 1</h2>
+            <p className="text-white">This is the first card in the stack</p>
+            </div>
+          </ScrollStackItem>
+          <ScrollStackItem>
+          <div className="bg-fuchsia-500">
+            <h2 className="text-white">Card 2</h2>
+            <p className="text-white">This is the second card in the stack</p>
+            </div>
+          </ScrollStackItem>
+          <ScrollStackItem>
+          <div className="bg-fuchsia-500">
+            <h2 className="text-white">Card 3</h2>
+            <p className="text-white">This is the third card in the stack</p>
+            </div>
+          </ScrollStackItem>
+          <ScrollStackItem>
+          <div className="bg-fuchsia-500">
+            <h2 className="text-white">Card 4</h2>
+            <p className="text-white">This is the first card in the stack</p>
+            </div>
+          </ScrollStackItem>
+          <ScrollStackItem>
+          <div className="bg-fuchsia-500">
+            <h2 className="text-white">Card 5</h2>
+            <p className="text-white">This is the second card in the stack</p>
+            </div>
+          </ScrollStackItem>
+          <ScrollStackItem>
+          <div className="bg-fuchsia-500">
+            <h2 className="text-white">Card 6</h2>
+            <p className="text-white">This is the third card in the stack</p>
+            </div>
+          </ScrollStackItem>
+        </ScrollStack>
       </div>
       {/* Footer */}
       <Footer />

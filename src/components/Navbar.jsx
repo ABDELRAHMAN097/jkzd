@@ -72,7 +72,7 @@ const Navbar = () => {
               initial="hidden"
               animate="visible"
               exit="exit"
-              onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside
+              onClick={(e) => e.stopPropagation()} 
             >
               {/* Close Button */}
               <div className="flex justify-end">
