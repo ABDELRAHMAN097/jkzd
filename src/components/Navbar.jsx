@@ -18,7 +18,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation("global");
 
   // Handle scroll lock
   useEffect(() => {
@@ -45,7 +45,10 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed top-0 right-0 p-4 z-50">
+    <div 
+    dir={i18n.language === "ar" ? "ltr" : "rtl"}
+    className="fixed top-0 right-0 p-4 z-50"
+    >
       <button
         onClick={() => setIsOpen(true)}
         className="text-white text-3xl"
@@ -91,7 +94,7 @@ const Navbar = () => {
                     href="#about"
                     className="w-full h-full flex justify-center items-center transition"
                   >
-                    About
+                    {t("section.about")}
                   </a>
                 </Tile>
 
@@ -100,12 +103,12 @@ const Navbar = () => {
                     href="#skills"
                     className="w-full h-full flex justify-center items-center transition"
                   >
-                    Skills
+                    {t("section.skills")}
                   </a>
                 </Tile>
 
                 <div className="bg-[#2c2c2e] col-span-2 row-span-2 rounded-xl p-2 grid place-items-center text-center">
-                  <p className="text-xs">Not Playing</p>
+                  <p className="text-xs">{t("nav.Not")}</p>
                   <div className="flex gap-2 mt-2 text-white text-sm">
                     <button>{"<<"}</button>
                     <button>
@@ -120,7 +123,7 @@ const Navbar = () => {
                     href="#tools"
                     className="w-full h-full flex justify-center items-center transition"
                   >
-                    Tools
+                    {t("section.tools")}
                   </a>
                 </Tile>
                 <Tile>
@@ -128,7 +131,7 @@ const Navbar = () => {
                     href="#experience"
                     className="w-full h-full flex justify-center items-center transition"
                   >
-                    Experience
+                    {t("section.experience")}
                   </a>
                 </Tile>
                 <Tile>
@@ -136,7 +139,7 @@ const Navbar = () => {
                     href="#projects"
                     className="w-full h-full flex justify-center items-center transition"
                   >
-                    Projects
+                    {t("section.projects")}
                   </a>
                 </Tile>
 
@@ -184,7 +187,7 @@ const Navbar = () => {
                     rel="noopener noreferrer"
                     className="w-full h-full flex justify-center items-center transition"
                   >
-                    WhatsApp
+                    {t("nav.whatsapp")}
                   </a>
                 </Tile>
                 <Tile>
@@ -193,7 +196,7 @@ const Navbar = () => {
                     target="_blank"
                     className="w-full h-full flex justify-center items-center transition"
                   >
-                    GitHub
+                    {t("nav.github")}
                   </Link>
                 </Tile>
                 <Tile>
@@ -202,7 +205,7 @@ const Navbar = () => {
                     target="_blank"
                     className="w-full h-full flex justify-center items-center transition"
                   >
-                    LinkedIn
+                    {t("nav.linkedin")}
                   </Link>
                 </Tile>
               </div>

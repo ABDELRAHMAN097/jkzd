@@ -28,10 +28,10 @@ import Experience from "../components/Experience";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 import TiltedCard from "../components/ReactBits/TiltedCard ";
-import ScrollStack, { ScrollStackItem } from "../components/ReactBits/ScrollStack";
+import ScrambledText from "../components/ReactBits/ScrambledText ";
 
 const Home = () => {
-  const { t, i18n } = useTranslation("global");
+  const { t } = useTranslation("global");
   const videoRef = useRef(null);
   const timeoutRef = useRef(null);
 
@@ -296,16 +296,15 @@ const Home = () => {
             {/* Paragraph */}
             <div className="relative z-10 flex justify-center items-center w-full">
               <div className="w-full text-center md:text-start text-white p-4">
-                <DecryptedText
-                  className="text-xl md:text-2xl justify-start leading-relaxed"
-                  text={t("text.about-pragraph")}
-                  speed={100}
-                  maxIterations={20}
-                  characters="ABCD1234!?"
-                  animateOn="view"
-                  parentClassName="all-letters"
-                  encryptedClassName="encrypted"
-                />
+              <ScrambledText
+                  className="scrambled-text-demo"
+                  radius={100}
+                  duration={1.2}
+                  speed={0.5}
+                  scrambleChars=": ."
+                >
+                  {t("text.about-pragraph")}
+                </ScrambledText>
               </div>
             </div>
             {/* Tilted Card */}
@@ -409,44 +408,7 @@ const Home = () => {
       </div>
       {/*  */}
       <div className="max-h-screen">
-        <ScrollStack>
-          <ScrollStackItem>
-            <div className="bg-fuchsia-500 ">
-            <h2 className="text-white">Card 1</h2>
-            <p className="text-white">This is the first card in the stack</p>
-            </div>
-          </ScrollStackItem>
-          <ScrollStackItem>
-          <div className="bg-fuchsia-500">
-            <h2 className="text-white">Card 2</h2>
-            <p className="text-white">This is the second card in the stack</p>
-            </div>
-          </ScrollStackItem>
-          <ScrollStackItem>
-          <div className="bg-fuchsia-500">
-            <h2 className="text-white">Card 3</h2>
-            <p className="text-white">This is the third card in the stack</p>
-            </div>
-          </ScrollStackItem>
-          <ScrollStackItem>
-          <div className="bg-fuchsia-500">
-            <h2 className="text-white">Card 4</h2>
-            <p className="text-white">This is the first card in the stack</p>
-            </div>
-          </ScrollStackItem>
-          <ScrollStackItem>
-          <div className="bg-fuchsia-500">
-            <h2 className="text-white">Card 5</h2>
-            <p className="text-white">This is the second card in the stack</p>
-            </div>
-          </ScrollStackItem>
-          <ScrollStackItem>
-          <div className="bg-fuchsia-500">
-            <h2 className="text-white">Card 6</h2>
-            <p className="text-white">This is the third card in the stack</p>
-            </div>
-          </ScrollStackItem>
-        </ScrollStack>
+    
       </div>
       {/* Footer */}
       <Footer />

@@ -1,4 +1,10 @@
 {
+    "nav":{
+        "github":"Github",
+        "linkedin":"Linkedin",
+        "whatsapp":"Whatsapp",
+        "Not":"Not Playing"
+    },
     "heroSection": {
 
         "name": "Abdelrahman Magdy",
@@ -7,7 +13,7 @@
         "pragraph2": "Smooth Fast Responsive Just like your users expect"
     } ,
     "section" : {
-        "about": "About Me",
+        "about": "About",
         "skills": "Skills",
         "tools": "Tools",
         "experience": "Experience",

@@ -20,7 +20,9 @@ function App() {
       <div 
       dir={i18n.language === "ar" ? "rtl" : "ltr"}
       className="grid grid-cols-1 relative bg-black min-h-[100dvh] z-0 overflow-hidden">
-      <div className="fixed top-0 left-0 w-full z-50">
+      <div 
+      dir={i18n.language === "ar" ? "rtl" : "ltr"}
+      className="fixed top-0 left-0 w-full z-50">
         <Navbar />
       </div>  
        <AppRoutes />
