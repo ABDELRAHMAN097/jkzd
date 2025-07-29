@@ -30,6 +30,7 @@ import { motion } from "framer-motion";
 import TiltedCard from "../components/ReactBits/TiltedCard ";
 import ScrambledText from "../components/ReactBits/ScrambledText ";
 import Magnet from "../components/ReactBits/Magnet ";
+import Stepper, { Step } from "../components/ReactBits/Stepper";
 
 const Home = () => {
   const { t } = useTranslation("global");
@@ -171,7 +172,7 @@ const Home = () => {
     { icon: <SiReactquery />, color: "#ff4154", label: t("text.React Query") },
   ];
 
-   useEffect(() => {
+  useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
@@ -258,17 +259,16 @@ const Home = () => {
             </motion.p>
             {/* button cv */}
             <Magnet padding={100} disabled={false} magnetStrength={4}>
-            <div className="flex items-center gap-2 bg-white text-secondary px-6 py-2 rounded-full">
-              <Link
-                target="_blank"
-                href="https://drive.google.com/file/d/1M4NFtt8ou7qvoeo64fUTv-UeMMqwdjuX/view?usp=drive_link"
-                className="flex items-center gap-2"
-              >
-                <ImCloudDownload className="text-xl" />  CV
-              </Link>
-            </div>
-          </Magnet>
-
+              <div className="flex items-center gap-2 bg-white text-secondary px-6 py-2 rounded-full">
+                <Link
+                  target="_blank"
+                  href="https://drive.google.com/file/d/1M4NFtt8ou7qvoeo64fUTv-UeMMqwdjuX/view?usp=drive_link"
+                  className="flex items-center gap-2"
+                >
+                  <ImCloudDownload className="text-xl" /> CV
+                </Link>
+              </div>
+            </Magnet>
           </div>
           {/* 4taps */}
         </div>
@@ -301,7 +301,7 @@ const Home = () => {
             {/* Paragraph */}
             <div className="relative z-10 flex justify-center items-center w-full">
               <div className="w-full text-center md:text-start text-white p-4">
-              <ScrambledText
+                <ScrambledText
                   dir="auto"
                   className="scrambled-text-demo"
                   radius={100}
@@ -349,12 +349,11 @@ const Home = () => {
               className="custom-scroll-text text-secondary"
             />
           </div>
-          <div 
-          className="rotate-4">
+          <div className="rotate-4">
             <ScrollVelocity
-              dir="ltr"
               texts={["I'm not just a developer — I craft experiences"]}
               className="custom-scroll-text text-secondary "
+              reverse={true}
             />
           </div>
           <div className=" -rotate-4 my-44">
@@ -414,9 +413,50 @@ const Home = () => {
       <div id="projects">
         <Projects />
       </div>
-      {/*  */}
-      <div className="max-h-screen">
-    
+
+      {/* Stepper */}
+      <div className="h-screen">
+        <Stepper
+          initialStep={1}
+          onStepChange={(step) => {
+            console.log(step);
+          }}
+          onFinalStepCompleted={() => console.log("All steps completed!")}
+          backButtonText="Previous"
+          nextButtonText="Next"
+        >
+          <Step className="text-secondary">
+            <h2 className="text-white">Welcome to the React Bits stepper!</h2>
+            <p className="text-white">Check out the next step!</p>
+          </Step>
+          <Step className="text-secondary">
+            <h2 className="text-secondary">Step 2</h2>
+            <img
+              style={{
+                height: "100px",
+                width: "100%",
+                objectFit: "cover",
+                objectPosition: "center -70px",
+                borderRadius: "15px",
+                marginTop: "1em",
+              }}
+              src="https://www.purrfectcatgifts.co.uk/cdn/shop/collections/Funny_Cat_Cards_640x640.png?v=1663150894"
+            />
+            <p>Custom step content!</p>
+          </Step>
+          <Step className="text-secondary">
+            <h2 className="text-secondary">How about an input?</h2>
+            <input
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Your name?"
+            />
+          </Step>
+          <Step className="text-secondary">
+            <h2 className="text-secondary">Final Step</h2>
+            <p className="text-secondary">You made it!</p>
+          </Step>
+        </Stepper>
       </div>
       {/* Footer */}
       <Footer />

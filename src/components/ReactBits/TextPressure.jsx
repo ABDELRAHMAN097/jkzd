@@ -30,7 +30,6 @@ const TextPressure = ({
   const { i18n } = useTranslation("global");
   const isArabic = i18n.language === "ar";
 
-  // العربي → كلمة كلمة | الإنجليزي → حرف حرف
   const chars = isArabic ? text.split(/(\s+)/) : Array.from(text);
 
   const dist = (a, b) => Math.hypot(b.x - a.x, b.y - a.y);
@@ -179,7 +178,7 @@ const TextPressure = ({
             ref={(el) => (spansRef.current[i] = el)}
             data-char={char}
             className="inline-block"
-            style={{ whiteSpace: 'pre' }} // عشان المسافات تفضل موجودة
+            style={{ whiteSpace: 'pre' }}
           >
             {char}
           </span>

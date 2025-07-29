@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 export const ScrollVelocity = ({
   texts = [],
@@ -8,7 +9,14 @@ export const ScrollVelocity = ({
   scrollerClassName = "",
   parallaxStyle,
   scrollerStyle,
+  reverse, // ممكن تحددها يدوي أو تسيبها أوتوماتيك حسب اللغة
 }) => {
+  const { i18n } = useTranslation();
+  const isArabic = i18n.language === "ar";
+
+  // لو reverse مش متحددة، هنخليها أوتوماتيك حسب اللغة
+  const direction = reverse !== undefined ? reverse : isArabic;
+
   return (
     <section>
       {texts.map((text, index) => (
@@ -20,6 +28,7 @@ export const ScrollVelocity = ({
           scrollerClassName={scrollerClassName}
           parallaxStyle={parallaxStyle}
           scrollerStyle={scrollerStyle}
+          reverse={direction}
         />
       ))}
     </section>
@@ -33,15 +42,20 @@ function ScrollText({
   scrollerClassName,
   parallaxStyle,
   scrollerStyle,
+  reverse = false,
 }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "end start"], // من قبل ما تدخل لحد ما تخرج
+    offset: ["start end", "end start"],
   });
 
-  // نحرّك النص على محور X بناءً على الاسكرول
-  const x = useTransform(scrollYProgress, [0, 1], ["100%", "-100%"]);
+  // لو reverse = true يبقى من الشمال لليمين
+  const x = useTransform(
+    scrollYProgress,
+    [0, 1],
+    reverse ? ["-100%", "100%"] : ["100%", "-100%"]
+  );
 
   return (
     <div
