@@ -1,33 +1,25 @@
 import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const TextPressure = ({
   text = 'Compressa',
   fontFamily = 'Bitcount Grid Double", system-ui',
-
-  // This font is just an example, you should not use it in commercial projects.
-  // fontUrl = 'https://fonts.googleapis.com/css2?family=Rubik&family=Roboto+Serif&display=swap',
-
   width = true,
   weight = true,
   italic = true,
   alpha = false,
-
   flex = true,
   stroke = false,
   scale = false,
-
   textColor = '#FFFFFF',
   strokeColor = '#FF0000',
   strokeWidth = 2,
   className = '',
-
   minFontSize = 24,
-
 }) => {
   const containerRef = useRef(null);
   const titleRef = useRef(null);
   const spansRef = useRef([]);
-
   const mouseRef = useRef({ x: 0, y: 0 });
   const cursorRef = useRef({ x: 0, y: 0 });
 
@@ -35,13 +27,13 @@ const TextPressure = ({
   const [scaleY, setScaleY] = useState(1);
   const [lineHeight, setLineHeight] = useState(1);
 
-  const chars = text.split('');
+  const { i18n } = useTranslation("global");
+  const isArabic = i18n.language === "ar";
 
-  const dist = (a, b) => {
-    const dx = b.x - a.x;
-    const dy = b.y - a.y;
-    return Math.sqrt(dx * dx + dy * dy);
-  };
+  // العربي → كلمة كلمة | الإنجليزي → حرف حرف
+  const chars = isArabic ? text.split(/(\s+)/) : Array.from(text);
+
+  const dist = (a, b) => Math.hypot(b.x - a.x, b.y - a.y);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -50,7 +42,7 @@ const TextPressure = ({
     };
     const handleTouchMove = (e) => {
       const t = e.touches[0];
-      cursorRef.current.x = t.clien
+      cursorRef.current.x = t.clientX;
       cursorRef.current.y = t.clientY;
     };
 
@@ -99,7 +91,6 @@ const TextPressure = ({
     setSize();
     window.addEventListener('resize', setSize);
     return () => window.removeEventListener('resize', setSize);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scale, text]);
 
   useEffect(() => {
@@ -146,16 +137,10 @@ const TextPressure = ({
   }, [width, weight, italic, alpha, chars.length]);
 
   return (
-    <div
-      ref={containerRef}
-      className="relative w-full h-full overflow-hidden bg-transparent"
-    >
+    <div ref={containerRef} className="relative w-full h-full overflow-hidden bg-transparent">
       <style>{`
         @font-face {
           font-family: '${fontFamily}';
-          
-          
-          font-style: normal;
         }
         .stroke span {
           position: relative;
@@ -175,11 +160,11 @@ const TextPressure = ({
 
       <h1
         ref={titleRef}
-        className={`text-pressure-title ${className} ${flex ? 'flex justify-between' : ''
-          } ${stroke ? 'stroke' : ''} uppercase text-center`}
+        className={`text-pressure-title ${className} ${flex ? 'flex justify-between' : ''} ${stroke ? 'stroke' : ''} text-center`}
+        dir={isArabic ? "rtl" : "ltr"}
         style={{
           fontFamily,
-          fontSize: fontSize,
+          fontSize,
           lineHeight,
           transform: `scale(1, ${scaleY})`,
           transformOrigin: 'center top',
@@ -194,6 +179,7 @@ const TextPressure = ({
             ref={(el) => (spansRef.current[i] = el)}
             data-char={char}
             className="inline-block"
+            style={{ whiteSpace: 'pre' }} // عشان المسافات تفضل موجودة
           >
             {char}
           </span>

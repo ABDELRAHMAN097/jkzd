@@ -219,7 +219,8 @@ const Home = () => {
             </div>
             <div style={{ position: "relative" }}>
               <TextPressure
-                text="Hello I'm"
+                direction="auto"
+                text={t("heroSection.hello")}
                 flex={true}
                 alpha={false}
                 stroke={false}
@@ -257,16 +258,16 @@ const Home = () => {
             </motion.p>
             {/* button cv */}
             <Magnet padding={100} disabled={false} magnetStrength={4}>
-  <div className="flex items-center gap-2 bg-white text-secondary px-6 py-2 rounded-full">
-    <Link
-      target="_blank"
-      href="https://drive.google.com/file/d/1M4NFtt8ou7qvoeo64fUTv-UeMMqwdjuX/view?usp=drive_link"
-      className="flex items-center gap-2"
-    >
-      <ImCloudDownload className="text-xl" />  CV
-    </Link>
-  </div>
-</Magnet>
+            <div className="flex items-center gap-2 bg-white text-secondary px-6 py-2 rounded-full">
+              <Link
+                target="_blank"
+                href="https://drive.google.com/file/d/1M4NFtt8ou7qvoeo64fUTv-UeMMqwdjuX/view?usp=drive_link"
+                className="flex items-center gap-2"
+              >
+                <ImCloudDownload className="text-xl" />  CV
+              </Link>
+            </div>
+          </Magnet>
 
           </div>
           {/* 4taps */}
@@ -348,8 +349,10 @@ const Home = () => {
               className="custom-scroll-text text-secondary"
             />
           </div>
-          <div className="  rotate-4">
+          <div 
+          className="rotate-4">
             <ScrollVelocity
+              dir="ltr"
               texts={["I'm not just a developer — I craft experiences"]}
               className="custom-scroll-text text-secondary "
             />
