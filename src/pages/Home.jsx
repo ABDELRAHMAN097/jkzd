@@ -171,6 +171,9 @@ const Home = () => {
     { icon: <SiReactquery />, color: "#ff4154", label: t("text.React Query") },
   ];
 
+   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="grid grid-cols-1 min-h-[100dvh] gap-4">
       <div
@@ -298,6 +301,7 @@ const Home = () => {
             <div className="relative z-10 flex justify-center items-center w-full">
               <div className="w-full text-center md:text-start text-white p-4">
               <ScrambledText
+                  dir="auto"
                   className="scrambled-text-demo"
                   radius={100}
                   duration={1.2}

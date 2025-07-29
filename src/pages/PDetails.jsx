@@ -10,6 +10,11 @@ const PDetails = () => {
   const { id } = useParams();
   const project = selected_projects.find(p => p.id === id);
   if (!project) return <p className="text-center text-white">Project not found.</p>;
+ 
+ // eslint-disable-next-line react-hooks/rules-of-hooks
+ useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
   return (
     <div className="max-w-6xl mx-auto px-4 text-white">
       <Link to="/" className="text-secondary flex items-center gap-2 my-6 relative z-50">

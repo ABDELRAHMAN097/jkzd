@@ -2,8 +2,10 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
+import { useTranslation } from "react-i18next";
 
 gsap.registerPlugin(SplitText, ScrambleTextPlugin);
+
 
 const ScrambledText = ({
   radius = 100,
@@ -15,13 +17,16 @@ const ScrambledText = ({
   children,
 }) => {
   const rootRef = useRef(null);
-
+  
+  const { i18n } = useTranslation("global");
+  const isArabic = i18n.language === "ar";
   useEffect(() => {
     if (!rootRef.current) return;
 
     const split = SplitText.create(rootRef.current.querySelector("p"), {
-      type: "chars",
+      type: isArabic ? "words" : "chars",
       charsClass: "inline-block will-change-transform",
+      wordsClass: "inline-block will-change-transform",
     });
 
     split.chars.forEach((el) => {
