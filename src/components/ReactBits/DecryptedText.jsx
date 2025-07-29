@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 export default function DecryptedText({
   text,
   speed = 50,
-  maxIterations = 10,
+  maxIterations = 50,
   sequential = false,
   revealDirection = 'start',
   useOriginalCharsOnly = false,
@@ -17,7 +17,7 @@ export default function DecryptedText({
   ...props
 }) {
   const { i18n } = useTranslation("global");
-  const isArabic = i18n.language === "ar"; // ✅ معرفة اللغة
+  const isArabic = i18n.language === "ar"; 
   const [displayText, setDisplayText] = useState(text)
   const [isHovering, setIsHovering] = useState(false)
   const [isScrambling, setIsScrambling] = useState(false)
@@ -62,7 +62,6 @@ export default function DecryptedText({
 
     const shuffleText = (originalText, currentRevealed) => {
       if (isArabic) {
-        // ✅ العربي بيتعامل كوحدات كلمات مش حروف
         return originalText
           .split(' ')
           .map((word, i) => {

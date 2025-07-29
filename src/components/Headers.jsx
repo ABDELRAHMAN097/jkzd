@@ -14,12 +14,12 @@ const Headers = ({text}) => {
                       dir="auto"
                       className="text-5xl md:text-6xl font-anton text-secondary justify-start leading-relaxed"
                       text={text}
-                      speed={100}
-                      maxIterations={20}
+                      speed={20}
+                      maxIterations={50}
                       characters="ABCD1234!?"
                       animateOn="view"
                       parentClassName="all-letters"
-                      encryptedClassName="encrypted"
+                      encryptedClassName="encrypted text-4xl md:text-5xl"
                     />
                   </div>
     </div>

@@ -11,7 +11,7 @@ const Projects = () => {
   const { t } = useTranslation('global');
 
   return (
-    <div className='w-[90%] min-h-screen mx-auto'>
+    <div className='w-[90%] min-h-screen mx-auto flex flex-col justify-center'>
       <Headers text={t("section.projects")} />
       <div className="w-full">
         {
