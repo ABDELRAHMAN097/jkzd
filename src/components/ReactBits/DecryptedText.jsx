@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from 'react'
 import { motion } from 'framer-motion'
+import { useTranslation } from "react-i18next";
 
 export default function DecryptedText({
   text,
@@ -15,6 +16,8 @@ export default function DecryptedText({
   animateOn = 'hover',
   ...props
 }) {
+  const { i18n } = useTranslation("global");
+  const isArabic = i18n.language === "ar"; // ✅ معرفة اللغة
   const [displayText, setDisplayText] = useState(text)
   const [isHovering, setIsHovering] = useState(false)
   const [isScrambling, setIsScrambling] = useState(false)
@@ -58,7 +61,16 @@ export default function DecryptedText({
       : characters.split('')
 
     const shuffleText = (originalText, currentRevealed) => {
-      if (useOriginalCharsOnly) {
+      if (isArabic) {
+        // ✅ العربي بيتعامل كوحدات كلمات مش حروف
+        return originalText
+          .split(' ')
+          .map((word, i) => {
+            if (currentRevealed.has(i)) return word
+            return useOriginalCharsOnly ? word : availableChars[Math.floor(Math.random() * availableChars.length)]
+          })
+          .join(' ')
+      } else if (useOriginalCharsOnly) {
         const positions = originalText.split('').map((char, i) => ({
           char,
           isSpace: char === ' ',
@@ -141,6 +153,7 @@ export default function DecryptedText({
     revealDirection,
     characters,
     useOriginalCharsOnly,
+    isArabic
   ])
 
   useEffect(() => {
@@ -191,7 +204,7 @@ export default function DecryptedText({
       <span className="sr-only">{displayText}</span>
 
       <span aria-hidden="true">
-        {displayText.split('').map((char, index) => {
+        {displayText.split(isArabic ? ' ' : '').map((char, index) => {
           const isRevealedOrDone =
             revealedIndices.has(index) || !isScrambling || !isHovering
 

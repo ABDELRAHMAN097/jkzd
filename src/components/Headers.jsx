@@ -11,6 +11,7 @@ const Headers = ({text}) => {
                       alt="logo"
                     />
                     <DecryptedText
+                      dir="auto"
                       className="text-5xl md:text-6xl font-anton text-secondary justify-start leading-relaxed"
                       text={text}
                       speed={100}

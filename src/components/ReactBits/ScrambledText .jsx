@@ -69,7 +69,7 @@ const ScrambledText = ({
   return (
     <div
       ref={rootRef}
-      className={`w-full font-mono text-sm md:text-xl text-white ${className}`}
+      className={`w-full font-mono font-semibold text-sm md:text-xl text-white ${className}`}
       style={style}
     >
       <p>{children}</p>
