@@ -46,8 +46,8 @@ const Navbar = () => {
 
   return (
     <div 
-    dir={i18n.language === "ar" ? "ltr" : "rtl"}
-    className="fixed top-0 right-0 p-4 z-50"
+      dir="ltr"
+      className="fixed top-0 right-0 p-4 z-50"
     >
       <button
         onClick={() => setIsOpen(true)}
@@ -78,7 +78,7 @@ const Navbar = () => {
               onClick={(e) => e.stopPropagation()} 
             >
               {/* Close Button */}
-              <div className="flex justify-end">
+              <div className="flex justify-end" dir="ltr">
                 <button
                   onClick={() => setIsOpen(false)}
                   className="text-white text-2xl"

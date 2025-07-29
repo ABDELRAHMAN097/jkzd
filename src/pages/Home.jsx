@@ -6,7 +6,7 @@ import TextPressure from "../components/ReactBits/TextPressure";
 import Beams from "../components/ReactBits/Beams";
 import DecryptedText from "../components/ReactBits/DecryptedText";
 import ScrollVelocity from "../components/ReactBits/ScrollVelocity ";
-import { Link } from "react-router-dom";
+import { Link, Links } from "react-router-dom";
 import Headers from "../components/Headers";
 import GlassIcons from "../components/ReactBits/GlassIcons ";
 import Tools from "../components/ReactBits/Tools";
@@ -29,6 +29,7 @@ import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 import TiltedCard from "../components/ReactBits/TiltedCard ";
 import ScrambledText from "../components/ReactBits/ScrambledText ";
+import Magnet from "../components/ReactBits/Magnet ";
 
 const Home = () => {
   const { t } = useTranslation("global");
@@ -170,10 +171,6 @@ const Home = () => {
     { icon: <SiReactquery />, color: "#ff4154", label: t("text.React Query") },
   ];
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <div className="grid grid-cols-1 min-h-[100dvh] gap-4">
       <div
@@ -256,14 +253,18 @@ const Home = () => {
               {t("heroSection.pragraph2")}
             </motion.p>
             {/* button cv */}
-            <Link
-              target="_blank"
-              href="https://drive.google.com/file/d/1M4NFtt8ou7qvoeo64fUTv-UeMMqwdjuX/view?usp=drive_link"
-            >
-              <button className="flex items-center gap-2 bg-white text-secondary px-6 py-2 rounded-full">
-                <ImCloudDownload /> CV
-              </button>
-            </Link>
+            <Magnet padding={100} disabled={false} magnetStrength={4}>
+  <div className="flex items-center gap-2 bg-white text-secondary px-6 py-2 rounded-full">
+    <Link
+      target="_blank"
+      href="https://drive.google.com/file/d/1M4NFtt8ou7qvoeo64fUTv-UeMMqwdjuX/view?usp=drive_link"
+      className="flex items-center gap-2"
+    >
+      <ImCloudDownload className="text-xl" />  CV
+    </Link>
+  </div>
+</Magnet>
+
           </div>
           {/* 4taps */}
         </div>
