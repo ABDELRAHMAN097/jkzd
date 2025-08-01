@@ -415,7 +415,7 @@ const Home = () => {
       </div>
 
       {/* Stepper */}
-      <div className="h-screen">
+      {/* <div className="h-screen">
         <Stepper
           initialStep={1}
           onStepChange={(step) => {
@@ -457,7 +457,7 @@ const Home = () => {
             <p className="text-secondary">You made it!</p>
           </Step>
         </Stepper>
-      </div>
+      </div> */}
       {/* Footer */}
       <Footer />
     </div>
