@@ -53,6 +53,7 @@
     },
     
     "steper":{
+        "stepper":"الخطوات",
         "buttom_next":"التالي",
         "buttom_back":"السابق",
         "buttom_complete":"تم",

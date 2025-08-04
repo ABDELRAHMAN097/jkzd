@@ -61,6 +61,7 @@
         "pra": "Design & built by Abdelrahman Magdy"
     },
     "steper":{
+            "stepper":"Stepper",
             "buttom_next":"Next",
             "buttom_back":"Back",
             "buttom_complete":"Complete",

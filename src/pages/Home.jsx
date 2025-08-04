@@ -426,7 +426,7 @@ const Home = () => {
       </div>
 
       {/* Stepper */}
-      <div className="h-screen">
+      <div id="stepper" className="h-screen">
         <Stepper
           initialStep={1}
           onStepChange={(step) => {

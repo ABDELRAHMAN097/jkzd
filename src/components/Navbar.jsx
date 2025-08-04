@@ -178,7 +178,12 @@ const Navbar = () => {
                 </Tile>
 
                 <Tile>
-                  <FaEye />
+                  <a
+                    href="#stepper"
+                    className="w-full h-full flex justify-center items-center transition"
+                  >
+                    {t("steper.stepper")}
+                  </a>
                 </Tile>
                 <Tile>
                   <a
