@@ -18,7 +18,18 @@ import {
   SiVite,
   SiReactquery,
 } from "react-icons/si";
-import { FaDribbble, FaGitAlt, FaGithubAlt, FaReact } from "react-icons/fa";
+import {
+  FaCheckCircle,
+  FaClipboardCheck,
+  FaClipboardList,
+  FaCogs,
+  FaDribbble,
+  FaGitAlt,
+  FaGithubAlt,
+  FaHandshake,
+  FaReact,
+  FaWhatsapp,
+} from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { TbBrandRedux } from "react-icons/tb";
 import { FaShopify } from "react-icons/fa";
@@ -415,49 +426,74 @@ const Home = () => {
       </div>
 
       {/* Stepper */}
-      {/* <div className="h-screen">
+      <div className="h-screen">
         <Stepper
           initialStep={1}
           onStepChange={(step) => {
-            console.log(step);
           }}
-          onFinalStepCompleted={() => console.log("All steps completed!")}
-          backButtonText="Previous"
-          nextButtonText="Next"
+          backButtonText={t("steper.buttom_back")}
+          nextButtonText={t("steper.buttom_next")}
         >
-          <Step className="text-secondary">
-            <h2 className="text-white">Welcome to the React Bits stepper!</h2>
-            <p className="text-white">Check out the next step!</p>
+          {/* الترحيب */}
+          <Step>
+            <div className="flex flex-col items-center text-center text-white space-y-4">
+              <FaHandshake className="text-[#00f050]" size={50} />
+              <h2 className="font-bold text-xl">{t("steper.step1_title")}</h2>
+              <p>
+                {t("steper.step1_text")}
+              </p>
+            </div>
           </Step>
-          <Step className="text-secondary">
-            <h2 className="text-secondary">Step 2</h2>
-            <img
-              style={{
-                height: "100px",
-                width: "100%",
-                objectFit: "cover",
-                objectPosition: "center -70px",
-                borderRadius: "15px",
-                marginTop: "1em",
-              }}
-              src="https://www.purrfectcatgifts.co.uk/cdn/shop/collections/Funny_Cat_Cards_640x640.png?v=1663150894"
-            />
-            <p>Custom step content!</p>
+
+          {/* التواصل عبر الواتساب */}
+          <Step>
+            <div className="flex flex-col items-center text-center text-white space-y-4">
+              <FaWhatsapp className="text-[#00f050]" size={50} />
+              <h2 className="font-bold text-xl">
+                 {t("steper.step2_title")}
+              </h2>
+              <p>
+                {t("steper.step2_text")}
+                <br />
+                <a
+                    href="https://wa.me/201023671214?text=مرحبا،%20أرغب%20في%20الاستفسار%20عن%20خدماتكم"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full h-full underline text-secondary flex justify-center items-center transition"
+                  >
+                    {t("nav.whatsapp")}
+                  </a>
+                <br />
+                {t("steper.step2_after_link")}
+              </p>
+            </div>
           </Step>
-          <Step className="text-secondary">
-            <h2 className="text-secondary">How about an input?</h2>
-            <input
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder="Your name?"
-            />
+
+          {/* تحديد التفاصيل */}
+          <Step>
+            <div className="flex flex-col items-center text-center text-white space-y-4">
+              <FaClipboardCheck className="text-[#00f050]" size={50} />
+              <h2 className="font-bold text-xl">
+                {t("steper.step3_title")}
+              </h2>
+              <p>
+                {t("steper.step3_text")}
+              </p>
+            </div>
           </Step>
-          <Step className="text-secondary">
-            <h2 className="text-secondary">Final Step</h2>
-            <p className="text-secondary">You made it!</p>
+
+          {/* التسليم */}
+          <Step>
+            <div className="flex flex-col items-center text-center text-white space-y-4">
+              <FaCheckCircle className="text-[#00f050]" size={50} />
+              <h2 className="font-bold text-xl">{t("steper.step4_title")}</h2>
+              <p>
+                {t("steper.step4_text")}
+              </p>
+            </div>
           </Step>
         </Stepper>
-      </div> */}
+      </div>
       {/* Footer */}
       <Footer />
     </div>

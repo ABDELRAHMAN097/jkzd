@@ -59,5 +59,23 @@
     "last": {
         "areYou": "Are you need website?",
         "pra": "Design & built by Abdelrahman Magdy"
+    },
+    "steper":{
+            "buttom_next":"Next",
+            "buttom_back":"Back",
+            "buttom_complete":"Complete",
+            "step1_title": "Welcome to my website",
+            "step1_text": "Welcome! I am here to help you and provide the best possible service. Follow the steps to learn how we can agree on the details",
+          
+            "step2_title": "Contact me via WhatsApp",
+            "step2_text": "Message me directly on WhatsApp at",
+            "step2_link_text": "WhatsApp",
+            "step2_after_link": "to explain your request in detail",
+          
+            "step3_title": "Confirm details and cost",
+            "step3_text": "After receiving your message, I will contact you on WhatsApp to confirm the details, price, and delivery time",
+          
+            "step4_title": "Execution and delivery",
+            "step4_text": "Once we agree, I will start the work and then send you the final result via WhatsApp or any method you prefer"
     }
 }
