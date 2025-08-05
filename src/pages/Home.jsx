@@ -41,6 +41,7 @@ import { motion } from "framer-motion";
 import TiltedCard from "../components/ReactBits/TiltedCard ";
 import ScrambledText from "../components/ReactBits/ScrambledText ";
 import Magnet from "../components/ReactBits/Magnet ";
+import Ballpit from "../components/ReactBits/Ballpit";
 import Stepper, { Step } from "../components/ReactBits/Stepper";
 
 const Home = () => {
@@ -426,13 +427,23 @@ const Home = () => {
       </div>
 
       {/* Stepper */}
-      <div id="stepper" className="h-screen">
+      <div id="stepper" className="h-screen py-5 relative">
+        <div className="w-full absolute bottom-0 z-0">
+        <Ballpit
+          count={200}
+          gravity={0.7}
+          friction={0.8}
+          wallBounce={0.95}
+          followCursor={true}
+          />
+          </div>
         <Stepper
           initialStep={1}
           onStepChange={(step) => {
           }}
           backButtonText={t("steper.buttom_back")}
           nextButtonText={t("steper.buttom_next")}
+          className="relative z-10"
         >
           {/* الترحيب */}
           <Step>
@@ -493,6 +504,7 @@ const Home = () => {
             </div>
           </Step>
         </Stepper>
+
       </div>
       {/* Footer */}
       <Footer />

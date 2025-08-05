@@ -475,10 +475,10 @@ class Y extends c {
 
 const X = {
   count: 30,
-  colors:[0x00ff00, 0x006400],
-  ambientColor: 16777215,
-  ambientIntensity: 1,
-  lightIntensity: 200,
+  colors: [0x00ff00, 0x006400],
+  ambientColor: 0xffffff,
+  ambientIntensity: 0.05, // 🔹 إضاءة محيطة ضعيفة جدًا
+  lightIntensity: 10, // 🔹 إضاءة ضعيفة
   materialParams: {
     metalness: 0.5,
     roughness: 0.5,
@@ -487,17 +487,44 @@ const X = {
   },
   minSize: 0.3,
   maxSize: 0.5,
-  size0: 0.5,
-  gravity: 0.5,
-  friction: 0.9975,
-  wallBounce: 0.95,
-  maxVelocity: 0.15,
+  size0: 0.3, // 🔹 أكبر كرة للتحكم
+  gravity: 2, // 🔹 جاذبية أقوى
+  friction: 0.995, // 🔹 احتكاك أقل = سرعة أكتر
+  wallBounce: 1.5, // 🔹 ارتداد أقوى من 100%
+  maxVelocity: 0.4, // 🔹 سرعة أكبر
   maxX: 5,
   maxY: 5,
   maxZ: 2,
-  controlSphere0: false,
+  controlSphere0: true, // 🔹 عشان الكرة الرئيسية تتحكم
   followCursor: false
 };
+
+
+// const X = {
+//   count: 30,
+//   colors:[0x00ff00, 0x006400],
+//   ambientColor: 16777215,
+//   ambientIntensity: 0.2,
+//   lightIntensity: 20,
+//   materialParams: {
+//     metalness: 0.5,
+//     roughness: 0.5,
+//     clearcoat: 1,
+//     clearcoatRoughness: 0.15,
+//   },
+//   minSize: 0.3,
+//   maxSize: 0.5,
+//   size0: 0.05,
+//   gravity: 0.5,
+//   friction: 0.9975,
+//   wallBounce: 0.95,
+//   maxVelocity: 0.15,
+//   maxX: 5,
+//   maxY: 5,
+//   maxZ: 2,
+//   controlSphere0: false,
+//   followCursor: false
+// };
 
 const U = new m();
 
