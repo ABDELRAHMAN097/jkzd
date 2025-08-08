@@ -188,7 +188,7 @@ const Home = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="grid grid-cols-1 min-h-[100dvh] gap-4">
+    <div className="grid grid-cols-1 min-h-[100dvh]">
       <div
         onMouseMove={handleMouseMove}
         className="w-full relative text-white overflow-hidden"
@@ -427,7 +427,7 @@ const Home = () => {
       </div>
 
       {/* Stepper */}
-      <div id="stepper" className="h-screen py-5 relative">
+      <div id="stepper" className="h-screen relative px-2 md:px-0">
         <div className="w-full absolute bottom-0 z-0">
         <Ballpit
           count={200}

@@ -205,7 +205,57 @@
           }
         }
       ]
+    },
+    {
+      "id": "05",
+      "link": "https://al-rowad-dental-center.vercel.app/",
+      "p_name": "Al-Rowad Dental Center",
+      "stack": ["React.js", "Sass"],
+      "details": [
+        {
+          "title": "Al-Rowad Dental Center",
+          "githupLink": "https://github.com/ABDELRAHMAN097/Al-Rowad-Dental-Center",
+          "link": "https://al-rowad-dental-center.vercel.app/",
+          "year": 2024,
+          "tech_stack": ["React.js", "Sass", "Node.js", "Express", "MongoDB"],
+          "description": "Al-Rowad Dental Center is an online booking platform for a dental clinic. Patients can easily create an account, check the availability of doctors, and book, edit, or delete appointments based on the schedules provided. The platform also supports profile creation for doctors, allowing them to set their working hours and add social media links. The admin dashboard provides full control over bookings, enabling admins to view, manage, and delete appointments.",
+          "key_features": [
+            "🦷 User registration and login system",
+            "📅 View doctor availability and working hours",
+            "📝 Book, edit, or delete appointments online",
+            "📊 Admin dashboard to manage all bookings",
+            "👨‍⚕️ Doctors can create and manage their profiles",
+            "🕒 Set and update working hours for each doctor",
+            "🔗 Add social media links to doctor profiles",
+            "💻 Responsive design for all devices"
+          ],
+          "technical_highlights": [
+            "Frontend built with React.js and Sass for styling",
+            "Backend implemented in Node.js and Express by a collaborator",
+            "MongoDB for storing appointments, user, and doctor data",
+            "Full CRUD functionality for appointments",
+            "Authentication and authorization for patients, doctors, and admins"
+          ],
+          "role": {
+            "position": "Frontend Developer",
+            "responsibilities": [
+              "✅ Developed the entire frontend interface using React.js and Sass",
+              "✅ Integrated frontend with the backend APIs built in Node.js",
+              "✅ Implemented responsive and user-friendly booking workflows"
+            ]
+          },
+          "preview_images": [
+            "/image/projects/Al-Rowad-Dental-Center.png",
+            "/image/projects/Al-Rowad-Dashboard.png"
+          ],
+          "footer_stats": {
+            "stars": 304,
+            "likes": 208
+          }
+        }
+      ]
     }
+    
   ],
   "last": [
     {
