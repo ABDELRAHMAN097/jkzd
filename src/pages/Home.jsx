@@ -188,7 +188,7 @@ const Home = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="grid grid-cols-1 min-h-[100dvh]">
+    <div className="grid grid-cols-1 min-h-[100vh]">
       <div
         onMouseMove={handleMouseMove}
         className="w-full relative text-white overflow-hidden"
