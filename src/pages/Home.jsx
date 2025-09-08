@@ -273,8 +273,8 @@ const Home = () => {
             <Magnet padding={100} disabled={false} magnetStrength={4}>
               <div className="flex items-center gap-2 bg-white text-secondary px-6 py-2 rounded-full">
                 <a
-                  target="_blank"
-                  href="https://drive.google.com/file/d/1SmYWUr-fOsi6RcpeJjKrl1hgAeYPh3Hb/view?usp=drive_link"
+                  // target="_blank"
+                  // href="https://drive.google.com/file/d/1SmYWUr-fOsi6RcpeJjKrl1hgAeYPh3Hb/view?usp=drive_link"
                   className="flex items-center gap-2"
                 >
                   <ImCloudDownload className="text-xl" /> CV
