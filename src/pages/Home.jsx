@@ -431,8 +431,8 @@ const Home = () => {
         <div className="w-full absolute bottom-0 z-0">
         <Ballpit
           count={200}
-          gravity={0.7}
-          friction={0.8}
+          gravity={0.1}
+          friction={0.9975}
           wallBounce={0.95}
           followCursor={true}
           />
